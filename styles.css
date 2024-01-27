@@ -10,8 +10,8 @@ header {
     border-radius: 0 0 5px 5px;
     padding: 20px;
     position: fixed;
-    width: 100%;
     top: 0;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -19,8 +19,8 @@ nav {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    width: 100%;
     margin: 0 auto;
+    width: 100%;
 }
 
 .logo {
@@ -44,16 +44,16 @@ nav {
 }
 
 .burger_menu {
-    display: none;
-    flex-direction: column;
-    position: fixed;
-    right: 20px;
     background-color: transparent;
     border: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #fff;
     border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    font-size: 1.5em;
+    position: fixed;
+    right: 20px;
 }
 
 ul {
@@ -85,47 +85,47 @@ li a:hover {
 
 .accordion {
     background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 3px;
     color: #000;
     cursor: pointer;
-    padding: 10px;
-    border: 1px solid #fff;
-    text-align: left;
-    outline: none;
-    width: 150px;
     font-size: 17px;
     font-weight: 700;
-    border-radius: 3px;
+    outline: none;
+    padding: 10px;
+    text-align: left;
+    width: 150px;
 }
 
 .accordion i {
-    margin-left: 16px;
     font-size: 16px;
+    margin-left: 16px;
 }
 
 .panel {
-    display: none;
-    position: absolute;
-    width: 150px;
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    margin-top: 0.5px;
     animation: fadeInScale 0.3s ease-in-out;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    display: none;
+    margin-top: 0.5px;
     opacity: 0;
+    position: absolute;
     transform: scaleY(0);
+    width: 150px;
+    z-index: 1;
 }
 
 .panel button {
-    width: 100%;
-    padding: 12px;
-    text-align: left;
-    border: none;
-    cursor: pointer;
     animation: slideIn 0.3s ease-in-out;
     background-color: #ecf0f1;
+    border: none;
+    cursor: pointer;
     font-size: 0.9em;
     font-weight: 500;
     opacity: 0;
+    padding: 12px;
+    text-align: left;
     transform: translateY(20px);
+    width: 100%;
 }
 
 .panel button:hover {
@@ -136,6 +136,7 @@ li a:hover {
 .menu-dropdown:hover i {
     transform: rotate(180deg);
 }
+
 .menu-dropdown:hover .panel {
     display: block;
     opacity: 1;
@@ -170,47 +171,47 @@ li a:hover {
 }
 
 .main-index {
-    margin-top: 100px;
     background-color: #f9f9f9;
+    margin-top: 100px;
 }
 
 #perfil {
-    margin: 0;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
     flex-direction: column;
     height: 50vh;
+    justify-content: center;
+    margin: 0;
     padding: 10px;
 }
 
 .contenedor-perfil {
-    border-radius: 16px;
     background-color: #FFFFFF;
-    padding: 20px;
     border: 2px solid #EDEEF1;
-    text-align: left;
-    overflow-x: auto;
-    min-height: 80px;
+    border-radius: 16px;
     box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.5);
+    min-height: 80px;
+    overflow-x: auto;
+    padding: 20px;
+    text-align: left;
 }
 
 .contenedor-perfil table {
-    max-width: fit-content;
     border-collapse: collapse;
+    max-width: fit-content;
 }
 
 .contenedor-perfil caption {
     font-size: 1.2rem;
     font-weight: 700;
-    text-align: left;
     margin: 8px 0px;
+    text-align: left;
 }
 
 .contenedor-perfil th {
-    padding: 20px 16px;
-    font-size: 0.875rem;
     color: #A0A7B1;
+    font-size: 0.875rem;
+    padding: 20px 16px;
 }
 
 .contenedor-perfil thead {
@@ -235,9 +236,9 @@ li a:hover {
 }
 
 .perfil {
+    align-items: center;
     display: flex;
     gap: 16px;
-    align-items: center;
 }
 
 .info-perfil {
@@ -252,16 +253,16 @@ li a:hover {
 }
 
 .perfil img {
-    width: 50px;
-    height: 50px;
     border-radius: 50%;
+    height: 50px;
     object-fit: cover;
+    width: 50px;
 }
 
 .estado {
     border-radius: 8px;
-    padding: 8px;
     font-weight: 700;
+    padding: 8px;
 }
 
 .estado-activo {
@@ -275,10 +276,10 @@ li a:hover {
 }
 
 .etiqueta {
-    padding: 8px;
     background-color: #F1F2F6;
     border-radius: 8px;
     font-weight: 700;
+    padding: 8px;
 }
 
 .etiqueta::first-letter {
@@ -296,22 +297,22 @@ li a:hover {
 }
 
 #acerca-de {
-    padding: 0;
     margin-bottom: 50px;
+    padding: 0;
 }
 
 .contenido {
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: 0 auto;
 }
 
 .desarrollador-titulo {
     color: #FF7F00;
-    margin: 0;
     font-size: 1.6em;
+    margin: 0;
 }
 
 .card {
@@ -328,25 +329,25 @@ li a:hover {
 }
 
 .contenedor-despro {
-    display: flex;
-    margin-top: 30px;
-    justify-content: center;
     align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .contenedor-desarrollador {
-    display: flex;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
     margin: 0 30px;
+    overflow: hidden;
 }
 
 .desarrollador {
     margin: 0 20px;
-    text-align: center;
     padding: 20px;
+    text-align: center;
 }
 
 .desarrollador span {
@@ -357,32 +358,32 @@ li a:hover {
 
 .desarrollador .fecha,
 .desarrollador .contenedor-terminados {
-    font-size: 24px;
+    align-items: center;
     color: #4ecee2;
     display: flex;
     flex-direction: row;
+    font-size: 24px;
     justify-content: center;
-    align-items: center;
 }
 
 .fecha #años,
 .fecha #meses,
 .fecha #dias,
 .contenedor-terminados #proyectos-contador {
-    margin: 0 5px;
     background-color: #333;
-    padding: 10px;
     border-radius: 5px;
     box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    margin: 0 5px;
+    padding: 10px;
 }
 
 .fecha .fecha-titulo {
-    font-size: 10px;
-    color: #fff;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
     border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 10px;
 }
 
 #proyectos {
@@ -392,10 +393,10 @@ li a:hover {
 }
 
 .titulo-proyectos {
-    text-align: center;
-    margin: 0 0 30px 0;
     color: #FF7F00;
     font-size: 1.6em;
+    margin: 0 0 30px 0;
+    text-align: center;
 }
 
 .proyectos-contenedor {
@@ -407,28 +408,28 @@ li a:hover {
 }
 
 .card-proyecto {
-    position: relative;
     background-color: #fff;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
-    overflow: hidden;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
     height: 300px;
+    overflow: hidden;
+    position: relative;
     text-align: center;
 }
 
 .proyecto {
-    position: relative;
     height: 100%;
+    position: relative;
 }
 
 .proyecto-contenido {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100%;
-    text-align: center;
+    justify-content: center;
     opacity: 1;
+    text-align: center;
 }
 
 .proyecto-contenido h3 {
@@ -440,18 +441,18 @@ li a:hover {
 }
 
 .hover-efecto {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: center;
-    align-items: center;
+    position: absolute;
+    left: 0;
     opacity: 0;
+    top: 0;
     transition: opacity 0.3s ease-out;
+    width: 100%;
 }
 
 .proyecto:hover .hover-efecto {
@@ -463,8 +464,8 @@ li a:hover {
 }
 
 .hover-efecto h3 {
-    font-size: 1.4em;
     color: #fff;
+    font-size: 1.4em;
 }
 
 .lenguajes-utilizados {
@@ -473,47 +474,47 @@ li a:hover {
 }
 
 .lenguaje-item {
+    align-items: center;
     border: 2px solid #fff;
     border-radius: 50%;
+    display: flex;
+    height: 50px;
+    justify-content: center;
     overflow: hidden;
     width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .lenguajes-utilizados img {
-    max-width: 100%;
-    max-height: 100%;
-    width: 30px;
     height: 30px;
+    max-height: 100%;
+    max-width: 100%;
+    width: 30px;
 }
 
 .icono-proyecto {
-    width: 50px;
     height: 50px;
     margin-bottom: 10px;
+    width: 50px;
 }
 
 #habilidades {
-    display: flex;
     align-items: center;
+    display: flex;
     flex-direction: column;
     padding: 50px;
 }
 
 .contenedor-habilidades {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
     gap: 50px;
 }
 
 .titulos-habilidades {
+    color: #FF7F00;
     font-size: 1.6em;
     margin-bottom: 30px;
-    color: #FF7F00;
 }
 
 .habilidad {
@@ -525,21 +526,21 @@ li a:hover {
 }
 
 .habilidad:hover::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 50%;
+    color: #fff;
+    content: attr(data-nivel);
     display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 1em;
     font-weight: bold;
-    color: #fff;
+    justify-content: center;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
     z-index: 3;
-    content: attr(data-nivel);
 }
 
 .habilidad:nth-child(1) {
@@ -623,35 +624,35 @@ li a:hover {
 }
 
 #carrusel {
+    align-items: center;
     background-color: #333;
     box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.5);
-    height: 75vh;
     display: flex;
+    height: 75vh;
     justify-content: center;
-    align-items: center;
     overflow: hidden;
 }
 
 .carousel {
-    max-width: 900px;
     aspect-ratio: 16/9;
     margin: auto;
+    max-width: 900px;
     position: relative;
 }
 
 .contenedor-imagen {
-    overflow: hidden;
     box-shadow: 2px 4px 8px 12px rgba(0, 0, 0, 0.5);
-    max-width: 600px;
     margin: 0 auto;
+    max-width: 600px;
+    overflow: hidden;
 }
 
 .carousel img {
     display: block;
-    width: 100%;
     height: auto;
     max-width: none;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    width: 100%;
 }
 
 .carousel img.hidden {
@@ -663,15 +664,15 @@ li a:hover {
 }
 
 .anterior, .siguiente {
+    background-color: #3498db;
+    border: none;
+    box-shadow: 0 4px 4px 6px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
     position: absolute;
     top: 40%;
     transform: translateY(-50%);
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    box-shadow: 0 4px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 .anterior {
@@ -683,21 +684,21 @@ li a:hover {
 }
 
 .indicadores {
-    position: absolute;
     bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
 }
 
 .dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
     background-color: #ddd;
-    margin: 0 5px;
+    border-radius: 50%;
     cursor: pointer;
+    height: 5px;
+    margin: 0 5px;
     transition: background-color 0.3s ease;
+    width: 5px;
 }
 
 .dot.active {
@@ -707,15 +708,16 @@ li a:hover {
 /* Notas */
 
 .main-notas {
+    background-color: #f9f9f9;
     margin: 150px 0;
 }
 
 .tabla-nota { 
-    width: 1200px; 
     border-collapse: collapse; 
-    margin: 0 auto;
     border-radius: 10px;
+    margin: 0 auto;
     overflow: hidden;
+    width: 1200px; 
 }
 
 .contenedor-titulo-tecnico {
@@ -724,10 +726,10 @@ li a:hover {
 }
 
 .titulo-tecnico {
-    font-size: 25px;
-    text-align: center;
     animation: rotate 1.5s infinite alternate;
+    font-size: 25px;
     overflow: hidden;
+    text-align: center;
 }
 
 @keyframes rotate {
@@ -743,15 +745,15 @@ li a:hover {
 }
 
 .tabla-nota th, .tabla-nota td { 
+    border-bottom: 1px solid #ddd; 
     padding: 10px; 
     text-align: left; 
-    border-bottom: 1px solid #ddd; 
 } 
 
 .tabla-nota thead { 
     background-color: #F1F2F6; 
-    font-weight: 800;
     font-size: 17px;
+    font-weight: 800;
 } 
 
 .tabla-nota .modulo { 
@@ -771,15 +773,15 @@ li a:hover {
 } 
 
 .tabla-nota .eliminar:hover { 
-    text-decoration: none; 
-    color: #fff; 
     background-color: #721c24;
+    color: #fff; 
+    text-decoration: none; 
 }
 
 /* Contacto */
 .main-contacto { 
+    background-color: #f9f9f9;
     box-sizing: border-box; 
-    color: #fff; 
     margin-top: 100px;
     padding: 0 2rem; 
 } 
@@ -811,15 +813,15 @@ li a:hover {
 } 
 
 .formulario-contacto h3 {
-    margin-left: 14px;
     color: #000;
+    margin-left: 14px;
     text-align: left;
 }
 
 .formulario-contacto form { 
     display: grid; 
-    grid-template-columns: 1fr 1fr; 
     gap: 1em;
+    grid-template-columns: 1fr 1fr; 
 } 
 
 .formulario-contacto form div { 
@@ -834,14 +836,14 @@ li a:hover {
 
 .formulario-contacto form input, 
 .formulario-contacto form textarea { 
-    width: 100%; 
-    padding: 1em; 
-    border: none; 
     background: #c9ced3; 
+    border: none; 
+    border-bottom: 1px solid #ac0000; 
     border-radius: 5px;
     color: #333; 
-    border-bottom: 1px solid #ac0000; 
+    padding: 1em; 
     transition: background-color 0.3s ease-in-out;
+    width: 100%; 
 } 
 
 .formulario-contacto form input:focus, 
@@ -852,16 +854,16 @@ li a:hover {
 
 .formulario-contacto form button { 
     background: #ac0000; 
-    color: #fff; 
     border: 0; 
-    text-transform: uppercase; 
-    padding: 1em; 
-    margin-top: 69px;
+    border-radius: 5px;
+    color: #fff; 
+    font-weight: 800;
     margin-left: 25px;
+    margin-top: 69px;
+    padding: 1em; 
+    text-transform: uppercase; 
     transition: background-color 0.3s ease-in-out;
     width: 220px;
-    border-radius: 5px;
-    font-weight: 800;
 } 
 
 .formulario-contacto form button:hover, 
@@ -873,9 +875,9 @@ li a:hover {
 
 .informacion-contacto { 
     background: #c9ced3;
-    padding: 2em 0 0 2em;
     box-sizing: border-box; 
     overflow: hidden;
+    padding: 2em 0 0 2em;
 } 
 
 .informacion-contacto h3 {
@@ -888,8 +890,8 @@ li a:hover {
 }
 
 .informacion-contacto div { 
-    text-align: left; 
     color: #000;
+    text-align: left; 
 }
 
 .mi-informacion-contacto { 
@@ -898,14 +900,14 @@ li a:hover {
 }
 
 .mi-informacion-contacto div { 
+    display: flex;
     margin: 8px 8px 8px 0;
     padding: 8px;
-    display: flex;
 }
 
 .mi-informacion-contacto span { 
-    margin-left: 8px;
     font-weight: 700;
+    margin-left: 8px;
 }
 
 .informacion-contacto .img-informacion {
@@ -915,11 +917,11 @@ li a:hover {
 
 footer {
     background: #333;
+    border-top: 2px solid #0294FF;
     padding-top: 20px;
     position: relative;
     text-align: center;
     width: 100%;
-    border-top: 2px solid #0294FF;
 }
 
 .titulo-redes {
@@ -956,8 +958,6 @@ footer {
     margin-bottom: 0;
 }
 
-
-/* CSS RESPONSIVE HEADER */
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
     .nombre{
         font-size: 1.12em;
@@ -968,10 +968,10 @@ footer {
     }
 
     .tabla-nota {
-        width: 90%;
+        border-radius: 10px;
         margin: 0 auto;
         overflow-x: auto;
-        border-radius: 10px;
+        width: 90%;
     }
 
     .titulo-tecnico {
@@ -1009,8 +1009,8 @@ footer {
     }
 
     .img-logo {
-        width: 45px;
         height: 45px;
+        width: 45px;
     }
 
     .nombre {
@@ -1030,10 +1030,10 @@ footer {
     }
 
     .tabla-nota {
-        width: 90%;
+        border-radius: 10px;
         margin: 0 auto;
         overflow-x: auto;
-        border-radius: 10px;
+        width: 90%;
     }
 
     .titulo-tecnico {
@@ -1048,16 +1048,10 @@ footer {
         font-size: 16px;
     } 
 
-    .tabla-nota .modulo { 
-        font-size: 15px;
-    } 
-    
-    .tabla-nota .nota { 
-        font-size: 15px; 
-    } 
-    
+    .tabla-nota .modulo,
+    .tabla-nota .nota,
     .tabla-nota .estado-calificacion { 
-        font-size: 15px; 
+        font-size: 15px;
     } 
 
     .titulo-redes {
@@ -1093,21 +1087,21 @@ footer {
     }
 
     ul { 
+        background-color: #4ecee2;
         display: none;
         flex-direction: column;
-        position: absolute;
-        top: 100%;
         left: 0;
-        width: 100%;
-        background-color: #4ecee2;
-        z-index: 100;
         margin: 0;
         padding: 0;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        z-index: 100;
     } 
 
     li {
-        margin: 10px 45px;
         font-size: 1em;
+        margin: 10px 45px;
     }
 
     .menu-dropdown { 
@@ -1132,9 +1126,9 @@ footer {
     }
 
     .contenedor-perfil {
-        width: 92%;
-        overflow-x: hidden;
         margin: 0 auto;
+        overflow-x: hidden;
+        width: 92%;
     }
     
     .contenedor-perfil table {
@@ -1146,14 +1140,14 @@ footer {
     }
 
     .perfil img {
-        width: 35px;
         height: 35px;
+        width: 35px;
     }
 
     .contenedor-perfil th,
     .contenedor-perfil td {
-        max-width: 100%;
         font-size: 0.54em;
+        max-width: 100%;
     }
 
     .contenedor-perfil th {
@@ -1173,8 +1167,8 @@ footer {
     }
 
     .card {
-        width: 80%;
         font-size: 14px;
+        width: 80%;
     }
 
     .contenedor-despro {
@@ -1209,8 +1203,8 @@ footer {
     }
 
     .titulo-proyectos {
-        margin: 0;
         font-size: 18px;
+        margin: 0;
     }
 
     .card-proyecto {
@@ -1231,19 +1225,19 @@ footer {
     }
     
     .lenguaje-item {
-        width: 40px;
         height: 40px;
+        width: 40px;
     }
     
     .lenguajes-utilizados img {
-        width: 25px;
         height: 25px;
+        width: 25px;
     }
     
     .icono-proyecto {
-        width: 40px;
         height: 40px;
         margin-top: 10px;
+        width: 40px;
     }
 
     #habilidades {
@@ -1255,7 +1249,7 @@ footer {
     }
 
     .titulos-habilidades {
-        font-size: 1.5em;
+        font-size: 18px;
     }
     
     .habilidad {
@@ -1299,9 +1293,9 @@ footer {
 
     .anterior,
     .siguiente {
-        top: 35%;
         font-size: 12px;
         padding: 8px;
+        top: 35%;
     }
 
     .anterior {
@@ -1317,9 +1311,9 @@ footer {
     }
 
     .dot {
-        width: 4px;
         height: 4px;
         margin: 0 2px;
+        width: 4px;
     }
 
     .main-notas {
@@ -1327,8 +1321,8 @@ footer {
     } 
 
     .tabla-nota {
-        width: 100%;
         border-radius: 10px;
+        width: 100%;
     }
 
     .titulo-tecnico {
@@ -1343,21 +1337,15 @@ footer {
         font-size: 15px;
     } 
 
-    .tabla-nota .modulo { 
-        font-size: 13px;
-    } 
-    
-    .tabla-nota .nota { 
-        font-size: 13px; 
-    } 
-    
+    .tabla-nota .modulo,
+    .tabla-nota .nota,
     .tabla-nota .estado-calificacion { 
-        font-size: 13px; 
+        font-size: 13px;
     } 
 
     .main-contacto {
-        margin: 100px 0; 
         height: auto; 
+        margin: 100px 0; 
     } 
     
     .contenedor-contacto { 
@@ -1371,9 +1359,9 @@ footer {
     } 
     
     .formulario-contacto h3 { 
+        font-size: 18px;
         margin-left: 0; 
         text-align: center;
-        font-size: 18px;
     } 
     
     .formulario-contacto form {         
@@ -1386,8 +1374,8 @@ footer {
     } 
     
     .formulario-contacto form div { 
-        padding: 0; 
         margin-top: 20px;
+        padding: 0; 
     } 
 
     .formulario-contacto input,
@@ -1396,23 +1384,23 @@ footer {
     }
 
     .formulario-contacto .boton-contacto {
+        align-items: center;
         display: flex;
         justify-content: center;
-        align-items: center;
     }
     
     .formulario-contacto form button {
+        font-size: 12px; 
         margin-top: 10px; 
         width: 200px;
-        font-size: 12px; 
     } 
     
     .informacion-contacto { 
-        padding: 1em 0; 
-        display: flex;
-        justify-content: center;
         align-items: center;
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        padding: 1em 0; 
     } 
     
     .informacion-contacto .mapa { 
@@ -1420,8 +1408,8 @@ footer {
     } 
 
     .mi-informacion-contacto { 
-        justify-content: center;
         align-items: center;
+        justify-content: center;
     }   
 
     .titulo-redes {
@@ -1440,9 +1428,9 @@ footer {
 
 @media screen and (max-width: 500px) {
     .contenedor-perfil {
-        width: 90%;
-        overflow-x: hidden;
         margin: auto 0;
+        overflow-x: hidden;
+        width: 90%;
     }
 
     .contenedor-perfil caption {
@@ -1450,14 +1438,14 @@ footer {
     }
 
     .perfil img {
-        width: 30px;
         height: 30px;
+        width: 30px;
     }
 
     .contenedor-perfil th,
     .contenedor-perfil td {
-        max-width: 100%;
         font-size: 6.5px;
+        max-width: 100%;
     }
 
     .contenedor-perfil th {
@@ -1485,18 +1473,18 @@ footer {
     }
     
     .lenguaje-item {
-        width: 30px;
         height: 30px;
+        width: 30px;
     }
     
     .lenguajes-utilizados img {
-        width: 20px;
         height: 20px;
+        width: 20px;
     }
     
     .icono-proyecto {
-        width: 35px;
         height: 35px;
+        width: 35px;
     }
 
     #carrusel {
@@ -1504,9 +1492,9 @@ footer {
     }
 
     .main-contacto {
+        height: auto;
         margin: 100px 0;
         padding: 0; 
-        height: auto;
     } 
     
     .formulario-contacto h3 { 
@@ -1518,11 +1506,11 @@ footer {
     } 
 
     .informacion-contacto { 
-        padding: 1em 0; 
-        display: flex;
-        justify-content: center;
         align-items: center;
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        padding: 1em 0; 
     } 
 
     .mi-informacion-contacto span {
@@ -1530,7 +1518,7 @@ footer {
     }
     
     .mi-informacion-contacto iframe { 
-        width: 200px;
         height: 150px;
+        width: 200px;
     } 
 }
