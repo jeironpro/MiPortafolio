@@ -172,7 +172,6 @@ li a:hover {
 }
 
 .main-index {
-    /* background-color: #f9f9f9; */
     margin-top: 100px;
 }
 
@@ -707,9 +706,7 @@ li a:hover {
 }
 
 /* Notas */
-
 .main-notas {
-    /* background-color: #f9f9f9; */
     margin: 150px 0;
 }
 
@@ -781,8 +778,6 @@ li a:hover {
 
 /* Contacto */
 .main-contacto { 
-    /* background-color: #f9f9f9; */
-    /* box-sizing: border-box;  */
     margin-top: 100px;
     padding: 0 2rem; 
 } 
