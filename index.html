@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEIRON - PORTAFOLIO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/portafolio.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/desarrollador.png" alt="DESARROLLADOR" class="img-logo">
+                <span class="nombre">JEIRON ESPINAL</span>
+                <button class="burger_menu" onclick="menuBurger()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <ul>
+                <li>
+                    <a href="">Inicio</a>
+                </li>
+                <li>
+                    <a href="notas.html">Notas</a>
+                </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+            <div class="menu-dropdown">
+                <button class="accordion">Secciones <i class="fas fa-chevron-down"></i></button>
+                <div class="panel">
+                    <button onclick="scrollToSection('perfil')">Mi Perfil</button>
+                    <button onclick="scrollToSection('acerca-de')">Acerca De Mi</button>
+                    <button onclick="scrollToSection('proyectos')">Mis Proyectos</button>
+                    <button onclick="scrollToSection('habilidades')">Mis Lenguajes</button>
+                    <button onclick="scrollToSection('carrusel')">Carrusel</button>
+                    <button onclick="scrollToSection('redes')">Mis Redes</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="main-index">
+        <section id="perfil">
+            <div class="contenedor-perfil">
+                <table>
+                    <caption>Mi Perfil</caption> 
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Estado</th>
+                            <th>Correo Electr&oacute;nico</th>
+                            <th>Etiquetas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td class="perfil">
+                            <img src="img/programador.jpg" alt="JEIRON">
+                            <span class="info-perfil">
+                                <span class="nombre-perfil">Jeiron Espinal</span>
+                                <span class="nombre-usuario">@Jeironprogrammer</span>
+                            </span>
+                        </td>
+                        <td>
+                            <span class="estado estado-activo">Activo</span>
+                        </td>
+                        <td class="correo-perfil">jeironprogrammer@gmail.com</td>
+                        <td>
+                            <span class="etiquetas">
+                                <span class="etiqueta etiqueta-dev">Desarrollador</span>
+                            </span>        
+                        </td>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="acerca-de">
+            <div class="contenido">
+                <h2 class="desarrollador-titulo">Desarrollador Aplicaciones Web</h2>
+                <div class="card">
+                    <p>T&eacute;cnico en Diseño y Creaci&oacute;n de Software con experiencia en la creaci&oacute;n de aplicaciones web utilizando el lenguaje de programaci&oacute;n Python, con los Frameworks Flask y Django.</p>
+                </div>
+            </div>
+            <div class="contenedor-despro">
+                <div class="contenedor-desarrollador">
+                    <div class="desarrollador">
+                        <span>Desarrollador Desde</span>
+                        <span class="fecha">
+                            <span id="años">00</span>:
+                            <span id="meses">00</span>:
+                            <span id="dias">00</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="contenedor-desarrollador">
+                    <div class="desarrollador">
+                        <span>Proyectos Terminados</span>
+                        <span class="contenedor-terminados">
+                            <span id="proyectos-contador">02</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="proyectos" class="proyectos-grid">
+            <h2 class="titulo-proyectos">Mis Proyectos</h2>
+            <div class="proyectos-contenedor">
+            <div class="card-proyecto">
+                <div class="proyecto">
+                    <div class="proyecto-contenido">
+                        <img src="img/alpha.png" alt="ALPHA" class="icono-proyecto">
+                        <h3>Alpha Inventory</h3>
+                        <p>Es un proyecto que gestiona las compras y las ventas en una tienda X, adem&aacute;s del inventario de los productos registrados.</p>
+                    </div>
+                    <div class="hover-efecto">
+                        <h3>Lenguajes Utilizados</h3>
+                        <div class="lenguajes-utilizados">
+                            <div class="lenguaje-item">
+                                <img src="img/html.png" alt="HTML">
+                            </div>
+                            <div class="lenguaje-item">
+                                <img src="img/css.png" alt="CSS">
+                            </div>
+                            <div class="lenguaje-item">
+                                <img src="img/javascript.png" alt="JS">
+                            </div>
+                            <div class="lenguaje-item">
+                                <img src="img/python.png" alt="PYTHON">
+                            </div>
+                            <div class="lenguaje-item">
+                                <img src="img/flask.png" alt="FLASK">
+                            </div>
+                            <div class="lenguaje-item">
+                                <img src="img/django.png" alt="DJANGO">
+                            </div>
+                            <div class="lenguaje-item">
+                                <img src="img/mysql.png" alt="MySQL">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-proyecto">
+                <div class="proyecto">
+                    <div class="proyecto-contenido">
+                        <img src="img/prestamos.png" alt="PRESTAMOS" class="icono-proyecto">
+                        <h3>Pr&eacute;stamos Taveras</h3>
+                        <p>Es un proyecto que gestiona los pr&eacute;stamos que una entidad financiera ofrece a sus clientes.</p>
+                    </div>
+                    <div class="hover-efecto">
+                        <h3>Lenguajes Utilizados</h3>
+                        <div class="lenguajes-utilizados">
+                            <div class="lenguaje-item">
+                                <img src="img/html.png" alt="HTML">
+                            </div>
+                            <div class="lenguaje-item">
+                                <img src="img/css.png" alt="CSS">
+                            </div>
+                            <div class="lenguaje-item">
+                                <img src="img/javascript.png" alt="JS">
+                            </div>
+                            <div class="lenguaje-item">
+                                <img src="img/python.png" alt="PYTHON">
+                            </div>
+                            <div class="lenguaje-item">
+                                <img src="img/flask.png" alt="FLASK">
+                            </div>
+                            <div class="lenguaje-item">
+                                <img src="img/django.png" alt="DJANGO">
+                            </div>
+                            <div class="lenguaje-item">
+                                <img src="img/mysql.png" alt="MySQL">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section id="habilidades">
+            <h2 class="titulos-habilidades">Lenguajes Aprendidos & Nivel</h2>
+            <div class="contenedor-habilidades">
+                <div class="habilidad" data-porcentaje="90" style="--porcentaje:10%" data-nivel="Nivel Alto">
+                    <div class="icono">
+                        <img src="img/html.png" alt="HTML" class="img-icono">
+                        <span>HTML</span>
+                    </div>
+                    <span class="porcentaje">90%</span>
+                </div>
+                <div class="habilidad" data-porcentaje="75" style="--porcentaje:25%" data-nivel="Nivel Medio">
+                    <div class="icono">
+                        <img src="img/css.png" alt="CSS" class="img-icono">
+                        <span>CSS</span>
+                    </div>
+                    <span class="porcentaje">75%</span>
+                </div>
+                <div class="habilidad" data-porcentaje="80" style="--porcentaje:20%" data-nivel="Nivel Medio">
+                    <div class="icono">
+                        <img src="img/javascript.png" alt="JAVASCRIPT" class="img-icono">
+                        <span>JS</span>
+                    </div>
+                    <span class="porcentaje">80%</span>
+                </div>
+                <div class="habilidad" data-porcentaje="85" style="--porcentaje:15%" data-nivel="Nivel Alto">
+                    <div class="icono">
+                        <img src="img/python.png" alt="PYTHON" class="img-icono">
+                        <span>PYTHON</span>
+                    </div>
+                    <span class="porcentaje">85%</span>
+                </div>
+                <div class="habilidad" data-porcentaje="10" style="--porcentaje:90%" data-nivel="Nivel Bajo">
+                    <div class="icono">
+                        <img src="img/java.png" alt="JAVA" class="img-icono">
+                        <span>JAVA</span>
+                    </div>
+                    <span class="porcentaje">10%</span>
+                </div>
+                <div class="habilidad" data-porcentaje="90" style="--porcentaje:10%" data-nivel="Nivel Alto">
+                    <div class="icono">
+                        <img src="img/mysql.png" alt="MySQL" class="img-icono">
+                        <span>MySQL</span>
+                    </div>
+                    <span class="porcentaje">90%</span>
+                </div>
+            </div>
+        </section>
+        <section id="carrusel">
+            <div class="carousel">
+                <div class="contenedor-imagen">
+                    <img src="img/alpha/1.jpg" alt="" id="imagenCarrusel">
+                </div>
+                <div class="indicadores"></div>
+                <i class="fas fa-chevron-left anterior" onclick="cambiarImagen(-1)"></i>
+                <i class="fas fa-chevron-right siguiente" onclick="cambiarImagen(1)"></i>
+            </div>
+        </section>
+    </main>
+    <footer id="redes">
+        <h3 class="titulo-redes">Mis Redes Sociales</h3>
+        <div class="redes">
+            <div class="iconos-redes">
+                <a href="https://www.facebook.com/jeironprogrammer/" target="_blank"><img src="img/facebook.png" alt="FACEBOOK" class="img-redes"></a>
+            </div>
+            <div class="iconos-redes">
+                <a href="https://github.com/jeironpro" target="_blank"><img src="img/github.png" alt="GITHUB" class="img-redes"></a>
+            </div>
+            <div class="iconos-redes">
+                <a href="mailto:jeironprogrammer@gmail.com" target="_blank"><img src="img/gmail.png" alt="GMAIL" class="img-redes"></a>
+            </div>
+        </div>
+        <div class="footer-abajo">
+            <p>© 2024 Todos Los Derechos Reservados</p>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/25da21ab57.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
