@@ -1205,7 +1205,7 @@ footer {
 
     .card-proyecto {
         height: auto;
-        margin: 0 10px;
+        margin: 0 20px;
     }
     
     .proyecto-contenido h3 {
@@ -1214,7 +1214,7 @@ footer {
 
     .proyecto-contenido p {
         font-size: 14px;
-        width: 90%;
+        width: 95%;
     }
     
     .hover-efecto h3 {
@@ -1463,6 +1463,16 @@ footer {
     
     .fecha .fecha-titulo {
         font-size: 8px;
+    }
+
+    .card-proyecto {
+        height: auto;
+        margin: 0 10px;
+    }
+
+    .proyecto-contenido p {
+        font-size: 13px;
+        width: 90%;
     }
 
     .hover-efecto h3 {
