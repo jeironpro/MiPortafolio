@@ -112,6 +112,7 @@ const imagenes = [
     'img/preguntasrespuestas/4.jpg',
     'img/preguntasrespuestas/5.jpg',
     'img/preguntasrespuestas/6.jpg',
+    'img/preguntasrespuestas/7.jpg',
 ];
 
 function cambiarImagen(delta) {
