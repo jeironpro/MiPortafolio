@@ -1522,6 +1522,12 @@ footer {
         height: 40vh;
     }
 
+    .dot {
+        height: 3px;
+        margin: 0 1.5px;
+        width: 3px;
+    }
+
     .main-contacto {
         height: auto;
         margin: 100px 0;
