@@ -1205,7 +1205,7 @@ footer {
 
     .card-proyecto {
         height: auto;
-        margin: 0 20px;
+        margin: 0 10px;
     }
     
     .proyecto-contenido h3 {
@@ -1214,6 +1214,7 @@ footer {
 
     .proyecto-contenido p {
         font-size: 14px;
+        width: 90%;
     }
     
     .hover-efecto h3 {
@@ -1465,7 +1466,7 @@ footer {
     }
 
     .hover-efecto h3 {
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
     
     .lenguaje-item {

@@ -106,6 +106,12 @@ const imagenes = [
     'img/taveras/18.jpg',
     'img/taveras/19.jpg',
     'img/taveras/20.jpg',
+    'img/preguntasrespuestas/1.jpg',
+    'img/preguntasrespuestas/2.jpg',
+    'img/preguntasrespuestas/3.jpg',
+    'img/preguntasrespuestas/4.jpg',
+    'img/preguntasrespuestas/5.jpg',
+    'img/preguntasrespuestas/6.jpg',
 ];
 
 function cambiarImagen(delta) {
