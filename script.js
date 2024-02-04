@@ -113,6 +113,10 @@ const imagenes = [
     'img/preguntasrespuestas/5.jpg',
     'img/preguntasrespuestas/6.jpg',
     'img/preguntasrespuestas/7.jpg',
+    'img/calculadora/1.jpg',
+    'img/calendario/1.jpg',
+    'img/calendario/2.jpg',
+    'img/calendario/3.jpg',
 ];
 
 function cambiarImagen(delta) {
