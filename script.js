@@ -117,6 +117,9 @@ const imagenes = [
     'img/calendario/1.jpg',
     'img/calendario/2.jpg',
     'img/calendario/3.jpg',
+    'img/reproductorMusica/1.jpg',
+    'img/reproductorMusica/2.jpg',
+    'img/reproductorMusica/3.jpg',
 ];
 
 function cambiarImagen(delta) {
