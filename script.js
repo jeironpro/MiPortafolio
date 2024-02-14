@@ -120,6 +120,13 @@ const imagenes = [
     'img/reproductorMusica/1.jpg',
     'img/reproductorMusica/2.jpg',
     'img/reproductorMusica/3.jpg',
+    'img/snakeGame/1.jpg',
+    'img/snakeGame/2.jpg',
+    'img/ticTacToe/1.jpg',
+    'img/calculadoraEdad/1.jpg',
+    'img/gestionPresupuesto/1.jpg',
+    'img/listaTareas/1.jpg',
+    'img/memorizaCarta/1.jpg',
 ];
 
 function cambiarImagen(delta) {

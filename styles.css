@@ -198,7 +198,7 @@ li a:hover {
 
 .contenedor-perfil table {
     border-collapse: collapse;
-    max-width: fit-content;
+    width: 800px;
 }
 
 .contenedor-perfil caption {
@@ -1053,7 +1053,7 @@ footer {
     
     .contenedor-perfil th,
     .contenedor-perfil td {
-        font-size: 0.92em;
+        font-size: 1.1em;
     }
 
     .card {
@@ -1063,6 +1063,12 @@ footer {
     .proyectos-contenedor {
         margin: 0 20px;
         max-width: 900px;
+    }
+
+    .dot {
+        height: 5px;
+        margin: 0 2px;
+        width: 5px;
     }
 
     .tabla-nota {
@@ -1172,7 +1178,7 @@ footer {
     }
 
     .contenedor-perfil caption {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .perfil img {
@@ -1182,7 +1188,7 @@ footer {
 
     .contenedor-perfil th,
     .contenedor-perfil td {
-        font-size: 0.54em;
+        font-size: 1em;
         max-width: 100%;
     }
 
@@ -1349,7 +1355,7 @@ footer {
 
     .dot {
         height: 4px;
-        margin: 0 2px;
+        margin: 0 1.2px;
         width: 4px;
     }
 
@@ -1481,7 +1487,7 @@ footer {
 
     .contenedor-perfil th,
     .contenedor-perfil td {
-        font-size: 6.5px;
+        font-size: 10px;
         max-width: 100%;
     }
 
@@ -1564,7 +1570,7 @@ footer {
 
     .dot {
         height: 3px;
-        margin: 0 1.5px;
+        margin: 0 1.2px;
         width: 3px;
     }
 
