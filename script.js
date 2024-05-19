@@ -1,53 +1,87 @@
-function enviarCorreo() {
-    var form = document.getElementById("miFormulario")
-    let params = {
-        nombre: form.elements["nombre"].value,
-        correo: form.elements["correo"].value,
-        telefono: form.elements["telefono"].value,
-        asunto: form.elements["asunto"].value,
-        mensaje: form.elements["mensaje"].value,
+document.addEventListener("DOMContentLoaded", () => {
+    const TextoDesarrollador = document.getElementById('desarrollador-titulo');
+    const texto = TextoDesarrollador.innerText;
+    TextoDesarrollador.innerText = '';
+    let index = 0;
+
+    function escritura() {
+        if (index < texto.length) {
+            TextoDesarrollador.innerHTML += texto.charAt(index);
+            index++;
+            setTimeout(escritura, 100);
+        } else {
+            setTimeout(escrituraInfinita, 1000);
+        }
     }
 
-    emailjs.send('service_zfzhzj5','template_1hyvg4n',params).then(function(response) {
-        alert('Mensaje enviado correctamente!');
-    }, function(error) {
-        alert(JSON.stringify(error))
+    function escrituraInfinita() {
+        TextoDesarrollador.innerHTML = '';
+        index = 0;
+        escritura();
+    }
+
+    escritura();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    actualizarFecha();
+
+    setInterval(actualizarFecha, 86400000);
+});
+
+function actualizarFecha() {
+    const fechaIncial = new Date('2023-09-13');
+
+    const fechaHoy = new Date();
+
+    const tiempoDiferencia = fechaHoy - fechaIncial;
+
+    const diasInicio = Math.floor(tiempoDiferencia / (1000 * 60 * 60 * 24));
+
+    const anos = Math.floor(diasInicio / 365);
+    const meses = Math.floor((diasInicio % 365)/ 30);
+    const dias = diasInicio % 30;
+
+    let proyectos = document.querySelectorAll('.proyecto').length;
+
+    document.getElementById('años').innerHTML = ("<span class='fecha-titulo'>Años</span>" + padDigits(anos));
+    document.getElementById('meses').innerHTML = ("<span class='fecha-titulo'>Meses</span>" + padDigits(meses));
+    document.getElementById('dias').innerHTML = ("<span class='fecha-titulo'>Dias</span>" + padDigits(dias));
+    document.getElementById('proyectos-contador').innerHTML = ("<span class='proyectos-contador'>Proyectos</span>" + String(proyectos).padStart(2, '0'));
+}
+
+function padDigits(number) {
+    return (number < 10) ? `0${number}`: number;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll('.card-proyecto');
+    const anteriorPro = document.querySelector('.anterior-pro');
+    const siguientePro = document.querySelector('.siguiente-pro');
+    const posicionPro = document.querySelector('.posicion-pro');
+    let index = 0;
+
+    function mostrarProyecto(indice) {
+        cards.forEach((card, i) => {
+            card.classList.remove('activo');
+            if (i === indice) {
+                card.classList.add('activo');
+            }
+        });
+        posicionPro.textContent = indice + 1;
+    }
+
+    anteriorPro.addEventListener('click', function() {
+        index = (index > 0) ?  index - 1 : cards.length - 1;
+        mostrarProyecto(index);
     });
-}
 
-function guionesTelefono(input) {
-    input.value = input.value.replace(/\D/g, '');
-
-    if (input.value.length > 3) {
-        input.value = input.value.slice(0, 3) + '-' + input.value.slice(3);
-    }
-
-    if (input.value.length > 7) {
-        input.value = input.value.slice(0, 7) + '-' + input.value.slice(7);
-    }
-}
-
-function menuBurger() {
-    var ul = document.querySelector('ul');
-    var main = document.querySelector('main');
-    ul.classList.toggle('active');
-
-    if (ul.classList.contains('active')) {
-        main.style.marginTop = '250px';
-    } else {
-        main.style.marginTop = '100px';
-    }
-}
-
-function scrollToSection(sectionID) {
-    const section = document.getElementById(sectionID);
-    const espacio = document.querySelector('header').offsetHeight;
-
-    window.scrollTo({
-        top: section.offsetTop - espacio,
-        behavior: 'smooth'
+    siguientePro.addEventListener('click', function() {
+        index = (index < cards.length - 1) ? index + 1 : 0;
+        mostrarProyecto(index);
     });
-}
+    mostrarProyecto(index);
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     cambiarImagen(0);
@@ -86,26 +120,26 @@ const imagenes = [
     'img/alpha/29.jpg',
     'img/alpha/30.jpg',
     'img/alpha/31.jpg',
-    'img/taveras/1.jpg',
-    'img/taveras/2.jpg',
-    'img/taveras/3.jpg',
-    'img/taveras/4.jpg',
-    'img/taveras/5.jpg',
-    'img/taveras/6.jpg',
-    'img/taveras/7.jpg',
-    'img/taveras/8.jpg',
-    'img/taveras/9.jpg',
-    'img/taveras/10.jpg',
-    'img/taveras/11.jpg',
-    'img/taveras/12.jpg',
-    'img/taveras/13.jpg',
-    'img/taveras/14.jpg',
-    'img/taveras/15.jpg',
-    'img/taveras/16.jpg',
-    'img/taveras/17.jpg',
-    'img/taveras/18.jpg',
-    'img/taveras/19.jpg',
-    'img/taveras/20.jpg',
+    'img/prestamos/1.jpg',
+    'img/prestamos/2.jpg',
+    'img/prestamos/3.jpg',
+    'img/prestamos/4.jpg',
+    'img/prestamos/5.jpg',
+    'img/prestamos/6.jpg',
+    'img/prestamos/7.jpg',
+    'img/prestamos/8.jpg',
+    'img/prestamos/9.jpg',
+    'img/prestamos/10.jpg',
+    'img/prestamos/11.jpg',
+    'img/prestamos/12.jpg',
+    'img/prestamos/13.jpg',
+    'img/prestamos/14.jpg',
+    'img/prestamos/15.jpg',
+    'img/prestamos/16.jpg',
+    'img/prestamos/17.jpg',
+    'img/prestamos/18.jpg',
+    'img/prestamos/19.jpg',
+    'img/prestamos/20.jpg',
     'img/preguntasrespuestas/1.jpg',
     'img/preguntasrespuestas/2.jpg',
     'img/preguntasrespuestas/3.jpg',
@@ -113,20 +147,6 @@ const imagenes = [
     'img/preguntasrespuestas/5.jpg',
     'img/preguntasrespuestas/6.jpg',
     'img/preguntasrespuestas/7.jpg',
-    'img/calculadora/1.jpg',
-    'img/calendario/1.jpg',
-    'img/calendario/2.jpg',
-    'img/calendario/3.jpg',
-    'img/reproductorMusica/1.jpg',
-    'img/reproductorMusica/2.jpg',
-    'img/reproductorMusica/3.jpg',
-    'img/snakeGame/1.jpg',
-    'img/snakeGame/2.jpg',
-    'img/ticTacToe/1.jpg',
-    'img/calculadoraEdad/1.jpg',
-    'img/gestionPresupuesto/1.jpg',
-    'img/listaTareas/1.jpg',
-    'img/memorizaCarta/1.jpg',
 ];
 
 function cambiarImagen(delta) {
@@ -154,52 +174,45 @@ function cambiarImagen(delta) {
     setTimeout(() => {
         imagenCarrusel.classList.remove('visible');
     }, 700);
-
-    actualizarIndicadores();
 }
 
-function actualizarIndicadores() {
-    const indicadores = document.querySelector('.indicadores')
-    indicadores.innerHTML = '';
+function moverLabelArriba(input) { 
+    var label = input.parentElement.querySelector('label');
+    label.style.top = '-15px';
+} 
 
-    for (let i = 0; i < imagenes.length; i++) {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (i === index) {
-            dot.classList.add('active');
-        }
-        dot.addEventListener('click', function () {
-            cambiarImagen(i - index);
-        });
-        indicadores.appendChild(dot);
+function restaurarLabel(input) { 
+    var label = input.parentElement.querySelector('label');
+    if (input.value === "") { 
+        label.style.top = "50%"; 
+    } 
+} 
+
+function guionesTelefono(input) {
+    input.value = input.value.replace(/\D/g, '');
+
+    if (input.value.length > 3) {
+        input.value = input.value.slice(0, 3) + '-' + input.value.slice(3);
+    }
+
+    if (input.value.length > 7) {
+        input.value = input.value.slice(0, 7) + '-' + input.value.slice(7);
     }
 }
 
+function enviarCorreo() {
+    var form = document.getElementById("miFormulario")
+    let params = {
+        nombre: form.elements["nombre"].value,
+        correo: form.elements["correo"].value,
+        telefono: form.elements["telefono"].value,
+        asunto: form.elements["asunto"].value,
+        mensaje: form.elements["mensaje"].value,
+    }
 
-document.addEventListener("DOMContentLoaded", function () {
-    actualizarFecha();
-
-    setInterval(actualizarFecha, 86400000);
-});
-
-function actualizarFecha() {
-    const fechaIncial = new Date('2023-09-13');
-
-    const fechaHoy = new Date();
-
-    const tiempoDiferencia = fechaHoy - fechaIncial;
-
-    const diasInicio = Math.floor(tiempoDiferencia / (1000 * 60 * 60 * 24));
-
-    const anos = Math.floor(diasInicio / 365);
-    const meses = Math.floor((diasInicio % 365)/ 30);
-    const dias = diasInicio % 30;
-
-    document.getElementById('años').innerHTML = ("<span class='fecha-titulo'>Años</span>" + padDigits(anos));
-    document.getElementById('meses').innerHTML = ("<span class='fecha-titulo'>Meses</span>" + padDigits(meses));
-    document.getElementById('dias').innerHTML = ("<span class='fecha-titulo'>Dias</span>" + padDigits(dias));
-}
-
-function padDigits(number) {
-    return (number < 10) ? `0${number}`: number;
+    emailjs.send('service_zfzhzj5','template_1hyvg4n',params).then(function(response) {
+        alert('Mensaje enviado correctamente!');
+    }, function(error) {
+        alert(JSON.stringify(error))
+    });
 }

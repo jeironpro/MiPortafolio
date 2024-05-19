@@ -14,68 +14,33 @@
             <div class="logo">
                 <img src="img/desarrollador.png" alt="DESARROLLADOR" class="img-logo">
                 <span class="nombre">JEIRON ESPINAL</span>
-                <button class="burger_menu" onclick="menuBurger()">
-                    <i class="fas fa-bars"></i>
-                </button>
             </div>
-            <ul>
+            <ul class="redes">
                 <li>
-                    <a href="">Inicio</a>
+                    <span class="titulo-red">Facebook</span>
+                    <a href="https://www.facebook.com/jeironprogrammer/" target="_blank">
+                        <span><i class="fab fa-facebook-f"></i></span>
+                    </a>
                 </li>
                 <li>
-                    <a href="notas.html">Notas</a>
+                    <span class="titulo-red">GitHub</span>
+                    <a href="https://github.com/jeironpro" target="_blank">
+                        <span><i class="fab fa-github"></i></span>
+                    </a>
                 </li>
                 <li>
-                    <a href="contacto.html">Contacto</a>
+                    <span class="titulo-red">Gmail</span>
+                    <a href="mailto:jeironprogrammer@gmail.com" target="_blank">
+                        <span><i class="fab fa-google"></i></span>
+                    </a>
                 </li>
             </ul>
-            <div class="menu-dropdown">
-                <button class="accordion">Secciones <i class="fas fa-chevron-down"></i></button>
-                <div class="panel">
-                    <button onclick="scrollToSection('perfil')">Mi Perfil</button>
-                    <button onclick="scrollToSection('acerca-de')">Acerca De Mi</button>
-                    <button onclick="scrollToSection('proyectos')">Mis Proyectos</button>
-                    <button onclick="scrollToSection('habilidades')">Mis Lenguajes</button>
-                    <button onclick="scrollToSection('carrusel')">Carrusel</button>
-                    <button onclick="scrollToSection('redes')">Mis Redes</button>
-                </div>
-            </div>
         </nav>
     </header>
     <main class="main-index">
-        <section id="perfil">
-            <div class="contenedor-perfil">
-                <table>
-                    <caption>Mi Perfil</caption> 
-                    <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Estado</th>
-                            <th>Etiquetas</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <td class="perfil">
-                            <img src="img/Programador.jpg" alt="JEIRON">
-                            <span class="info-perfil">
-                                <span class="nombre-perfil">Jeiron Espinal</span>
-                            </span>
-                        </td>
-                        <td>
-                            <span class="estado estado-activo">Activo</span>
-                        </td>
-                        <td>
-                            <span class="etiquetas">
-                                <span class="etiqueta etiqueta-dev">Desarrollador</span>
-                            </span>        
-                        </td>
-                    </tbody>
-                </table>
-            </div>
-        </section>
         <section id="acerca-de">
             <div class="contenido">
-                <h2 class="desarrollador-titulo">Desarrollador Aplicaciones Web</h2>
+                <h2 id="desarrollador-titulo" class="desarrollador-titulo">Desarrollador Aplicaciones Web</h2>
                 <div class="card">
                     <p>T&eacute;cnico en Diseño y Creaci&oacute;n de Software con experiencia en la creaci&oacute;n de aplicaciones web utilizando el lenguaje de programaci&oacute;n Python, con los Frameworks Flask y Django.</p>
                 </div>
@@ -83,365 +48,47 @@
             <div class="contenedor-despro">
                 <div class="contenedor-desarrollador">
                     <div class="desarrollador">
-                        <span>Desarrollador Desde</span>
+                        <h2 class="desarrollando">Desarrollando</h2>
                         <span class="fecha">
-                            <span id="años">00</span>:
-                            <span id="meses">00</span>:
-                            <span id="dias">00</span>
-                        </span>
-                    </div>
-                </div>
-                <div class="contenedor-desarrollador">
-                    <div class="desarrollador">
-                        <span>Proyectos Terminados</span>
-                        <span class="contenedor-terminados">
-                            <span id="proyectos-contador">12</span>
+                            <span id="años"></span>:
+                            <span id="meses"></span>:
+                            <span id="dias"></span>:
+                            <span id="proyectos-contador"></span>
                         </span>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="proyectos" class="proyectos-grid">
-            <h2 class="titulo-proyectos">Mis Proyectos</h2>
-            <div class="proyectos-contenedor">
-            <div class="card-proyecto">
-                <div class="proyecto">
-                    <div class="proyecto-contenido">
-                        <img src="img/alpha.png" alt="ALPHA" class="icono-proyecto">
-                        <h3>Alpha Inventory</h3>
-                        <p>Es un proyecto que gestiona las compras y las ventas en una tienda X, adem&aacute;s del inventario de los productos registrados.</p>
-                    </div>
-                    <div class="hover-efecto">
-                        <h3>Lenguajes Utilizados</h3>
-                        <div class="lenguajes-utilizados">
-                            <div class="lenguaje-item">
-                                <img src="img/html.png" alt="HTML">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/css.png" alt="CSS">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/javascript.png" alt="JS">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/python.png" alt="PYTHON">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/flask.png" alt="FLASK">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/django.png" alt="DJANGO">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/mysql.png" alt="MySQL">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-proyecto">
-                <div class="proyecto">
-                    <div class="proyecto-contenido">
-                        <img src="img/prestamos.png" alt="PRESTAMOS" class="icono-proyecto">
-                        <h3>Pr&eacute;stamos Taveras</h3>
-                        <p>Es un proyecto que gestiona los pr&eacute;stamos que una entidad financiera ofrece a sus clientes.</p>
-                    </div>
-                    <div class="hover-efecto">
-                        <h3>Lenguajes Utilizados</h3>
-                        <div class="lenguajes-utilizados">
-                            <div class="lenguaje-item">
-                                <img src="img/html.png" alt="HTML">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/css.png" alt="CSS">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/javascript.png" alt="JS">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/python.png" alt="PYTHON">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/flask.png" alt="FLASK">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/django.png" alt="DJANGO">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/mysql.png" alt="MySQL">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-proyecto">
-                <div class="proyecto">
-                    <div class="proyecto-contenido">
-                        <img src="img/preguntasrespuestas.png" alt="PREGUNTAS & RESPUESTAS" class="icono-proyecto">
-                        <h3>Preguntas & Respuestas</h3>
-                        <p>Es un juego con diferentes categor&iacute;as, adem&aacute;s de un temporizador para responder la pregunta y una puntuaci&oacute;n por respuesta.</p>
-                    </div>
-                    <div class="hover-efecto">
-                        <h3>Lenguajes Utilizados</h3>
-                        <div class="lenguajes-utilizados">
-                            <div class="lenguaje-item">
-                                <img src="img/html.png" alt="HTML">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/css.png" alt="CSS">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/javascript.png" alt="JS">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/python.png" alt="PYTHON">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/flask.png" alt="FLASK">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-proyecto">
-                <div class="proyecto">
-                    <div class="proyecto-contenido">
-                        <img src="img/calculadora.png" alt="CALCULADORA" class="icono-proyecto">
-                        <h3>Calculadora</h3>
-                        <p>Calculadora basada en la de Apple.</p>
-                    </div>
-                    <div class="hover-efecto">
-                        <h3>Lenguajes Utilizados</h3>
-                        <div class="lenguajes-utilizados">
-                            <div class="lenguaje-item">
-                                <img src="img/html.png" alt="HTML">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/css.png" alt="CSS">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/javascript.png" alt="JS">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-proyecto">
-                <div class="proyecto">
-                    <div class="proyecto-contenido">
-                        <img src="img/calendario.png" alt="CALENDARIO" class="icono-proyecto">
-                        <h3>Calendario</h3>
-                        <p>Calendario b&aacute;sico.</p>
-                    </div>
-                    <div class="hover-efecto">
-                        <h3>Lenguajes Utilizados</h3>
-                        <div class="lenguajes-utilizados">
-                            <div class="lenguaje-item">
-                                <img src="img/html.png" alt="HTML">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/css.png" alt="CSS">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/javascript.png" alt="JS">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-proyecto">
-                <div class="proyecto">
-                    <div class="proyecto-contenido">
-                        <img src="img/reproductor.png" alt="REPRODUCTOR DE MUSICA" class="icono-proyecto">
-                        <h3>Reproductor De M&uacute;sica</h3>
-                        <p>Reproductor de m&uacute;sica con lista de canciones y letras incluidas.</p>
-                    </div>
-                    <div class="hover-efecto">
-                        <h3>Lenguajes Utilizados</h3>
-                        <div class="lenguajes-utilizados">
-                            <div class="lenguaje-item">
-                                <img src="img/html.png" alt="HTML">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/css.png" alt="CSS">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/javascript.png" alt="JS">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-proyecto">
-                <div class="proyecto">
-                    <div class="proyecto-contenido">
-                        <img src="img/serpiente.png" alt="SNAKE GAME" class="icono-proyecto">
-                        <h3>Snake Game</h3>
-                        <p>Juego de la serpiente basico.</p>
-                    </div>
-                    <div class="hover-efecto">
-                        <h3>Lenguajes Utilizados</h3>
-                        <div class="lenguajes-utilizados">
-                            <div class="lenguaje-item">
-                                <img src="img/html.png" alt="HTML">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/css.png" alt="CSS">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/javascript.png" alt="JS">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-proyecto">
-                <div class="proyecto">
-                    <div class="proyecto-contenido">
-                        <img src="img/tictactoe.png" alt="TIC TAC TOE" class="icono-proyecto">
-                        <h3>Tic Tac Toe</h3>
-                        <p>Tic Tac Toe basico.</p>
-                    </div>
-                    <div class="hover-efecto">
-                        <h3>Lenguajes Utilizados</h3>
-                        <div class="lenguajes-utilizados">
-                            <div class="lenguaje-item">
-                                <img src="img/html.png" alt="HTML">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/css.png" alt="CSS">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/javascript.png" alt="JS">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-proyecto">
-                <div class="proyecto">
-                    <div class="proyecto-contenido">
-                        <img src="img/calculadoraEdad.png" alt="CALCULADORA EDAD" class="icono-proyecto">
-                        <h3>Calculadora De Edad</h3>
-                        <p>Calculadora de edad basica.</p>
-                    </div>
-                    <div class="hover-efecto">
-                        <h3>Lenguajes Utilizados</h3>
-                        <div class="lenguajes-utilizados">
-                            <div class="lenguaje-item">
-                                <img src="img/html.png" alt="HTML">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/css.png" alt="CSS">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/javascript.png" alt="JS">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-proyecto">
-                <div class="proyecto">
-                    <div class="proyecto-contenido">
-                        <img src="img/presupuesto.png" alt="GESTION PRESUPUESTO" class="icono-proyecto">
-                        <h3>Gestion De Presupuesto</h3>
-                        <p>proyecto que te permite visualizar de manera organizada tus ingresos y gastos.</p>
-                    </div>
-                    <div class="hover-efecto">
-                        <h3>Lenguajes Utilizados</h3>
-                        <div class="lenguajes-utilizados">
-                            <div class="lenguaje-item">
-                                <img src="img/html.png" alt="HTML">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/css.png" alt="CSS">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/javascript.png" alt="JS">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-proyecto">
-                <div class="proyecto">
-                    <div class="proyecto-contenido">
-                        <img src="img/listaTareas.png" alt="LISTA TAREAS" class="icono-proyecto">
-                        <h3>Lista De Tareas</h3>
-                        <p>proyecto que te permite agregar tareas a realizar, editar y borrarlas.</p>
-                    </div>
-                    <div class="hover-efecto">
-                        <h3>Lenguajes Utilizados</h3>
-                        <div class="lenguajes-utilizados">
-                            <div class="lenguaje-item">
-                                <img src="img/html.png" alt="HTML">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/css.png" alt="CSS">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/javascript.png" alt="JS">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-proyecto">
-                <div class="proyecto">
-                    <div class="proyecto-contenido">
-                        <img src="img/cartas.png" alt="MEMORIZA CARTA" class="icono-proyecto">
-                        <h3>Memoriza La Carta</h3>
-                        <p>Juego memoriza la carta hasta encontrar su par.</p>
-                    </div>
-                    <div class="hover-efecto">
-                        <h3>Lenguajes Utilizados</h3>
-                        <div class="lenguajes-utilizados">
-                            <div class="lenguaje-item">
-                                <img src="img/html.png" alt="HTML">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/css.png" alt="CSS">
-                            </div>
-                            <div class="lenguaje-item">
-                                <img src="img/javascript.png" alt="JS">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </section>
+        <div class="division"></div>
         <section id="habilidades">
-            <h2 class="titulos-habilidades">Lenguajes Aprendidos & Nivel</h2>
             <div class="contenedor-habilidades">
-                <div class="habilidad" data-porcentaje="90" style="--porcentaje:10%" data-nivel="Nivel Alto">
+                <div class="habilidad" data-porcentaje="50" style="--porcentaje:50%" data-nivel="Nivel Medio">
                     <div class="icono">
                         <img src="img/html.png" alt="HTML" class="img-icono">
                         <span>HTML</span>
                     </div>
-                    <span class="porcentaje">90%</span>
+                    <span class="porcentaje">50%</span>
                 </div>
-                <div class="habilidad" data-porcentaje="80" style="--porcentaje:20%" data-nivel="Nivel Medio">
+                <div class="habilidad" data-porcentaje="50" style="--porcentaje:50%" data-nivel="Nivel Medio">
                     <div class="icono">
                         <img src="img/css.png" alt="CSS" class="img-icono">
                         <span>CSS</span>
                     </div>
-                    <span class="porcentaje">80%</span>
+                    <span class="porcentaje">50%</span>
                 </div>
-                <div class="habilidad" data-porcentaje="80" style="--porcentaje:20%" data-nivel="Nivel Medio">
+                <div class="habilidad" data-porcentaje="50" style="--porcentaje:50%" data-nivel="Nivel Medio">
                     <div class="icono">
                         <img src="img/javascript.png" alt="JAVASCRIPT" class="img-icono">
                         <span>JS</span>
                     </div>
-                    <span class="porcentaje">80%</span>
+                    <span class="porcentaje">50%</span>
                 </div>
-                <div class="habilidad" data-porcentaje="85" style="--porcentaje:15%" data-nivel="Nivel Alto">
+                <div class="habilidad" data-porcentaje="50" style="--porcentaje:50%" data-nivel="Nivel Medio">
                     <div class="icono">
                         <img src="img/python.png" alt="PYTHON" class="img-icono">
                         <span>PYTHON</span>
                     </div>
-                    <span class="porcentaje">85%</span>
+                    <span class="porcentaje">50%</span>
                 </div>
                 <div class="habilidad" data-porcentaje="10" style="--porcentaje:90%" data-nivel="Nivel Bajo">
                     <div class="icono">
@@ -450,44 +97,195 @@
                     </div>
                     <span class="porcentaje">10%</span>
                 </div>
-                <div class="habilidad" data-porcentaje="90" style="--porcentaje:10%" data-nivel="Nivel Alto">
+                <div class="habilidad" data-porcentaje="50" style="--porcentaje:50%" data-nivel="Nivel Medio">
                     <div class="icono">
                         <img src="img/mysql.png" alt="MySQL" class="img-icono">
                         <span>MySQL</span>
                     </div>
-                    <span class="porcentaje">90%</span>
+                    <span class="porcentaje">50%</span>
                 </div>
             </div>
         </section>
-        <section id="carrusel">
-            <div class="carousel">
-                <div class="contenedor-imagen">
-                    <img src="img/alpha/1.jpg" alt="" id="imagenCarrusel">
+        <div class="division"></div>
+        <section id="proyectos" class="proyectos-grid">
+            <div class="proyectos-contenedor">
+                <div class="card-proyecto">
+                    <div class="proyecto">
+                        <div class="proyecto-contenido">
+                            <img src="img/alpha.png" alt="ALPHA" class="icono-proyecto">
+                            <h3>Alpha Inventory</h3>
+                            <p>Es un proyecto que gestiona las compras y las ventas en una tienda X, adem&aacute;s del inventario de los productos registrados.</p>
+                        </div>
+                        <div class="hover-efecto">
+                            <h3>Lenguajes Utilizados</h3>
+                            <div class="lenguajes-utilizados">
+                                <div class="lenguaje-item">
+                                    <img src="img/html.png" alt="HTML">
+                                </div>
+                                <div class="lenguaje-item">
+                                    <img src="img/css.png" alt="CSS">
+                                </div>
+                                <div class="lenguaje-item">
+                                    <img src="img/javascript.png" alt="JS">
+                                </div>
+                                <div class="lenguaje-item">
+                                    <img src="img/python.png" alt="PYTHON">
+                                </div>
+                                <div class="lenguaje-item">
+                                    <img src="img/flask.png" alt="FLASK">
+                                </div>
+                                <div class="lenguaje-item">
+                                    <img src="img/django.png" alt="DJANGO">
+                                </div>
+                                <div class="lenguaje-item">
+                                    <img src="img/mysql.png" alt="MySQL">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="indicadores"></div>
-                <i class="fas fa-chevron-left anterior" onclick="cambiarImagen(-1)"></i>
-                <i class="fas fa-chevron-right siguiente" onclick="cambiarImagen(1)"></i>
+                <div class="card-proyecto">
+                    <div class="proyecto">
+                        <div class="proyecto-contenido">
+                            <img src="img/prestamos.png" alt="PRESTAMOS" class="icono-proyecto">
+                            <h3>Pr&eacute;stamos Taveras</h3>
+                            <p>Es un proyecto que gestiona los pr&eacute;stamos que una entidad financiera ofrece a sus clientes.</p>
+                        </div>
+                        <div class="hover-efecto">
+                            <h3>Lenguajes Utilizados</h3>
+                            <div class="lenguajes-utilizados">
+                                <div class="lenguaje-item">
+                                    <img src="img/html.png" alt="HTML">
+                                </div>
+                                <div class="lenguaje-item">
+                                    <img src="img/css.png" alt="CSS">
+                                </div>
+                                <div class="lenguaje-item">
+                                    <img src="img/javascript.png" alt="JS">
+                                </div>
+                                <div class="lenguaje-item">
+                                    <img src="img/python.png" alt="PYTHON">
+                                </div>
+                                <div class="lenguaje-item">
+                                    <img src="img/flask.png" alt="FLASK">
+                                </div>
+                                <div class="lenguaje-item">
+                                    <img src="img/django.png" alt="DJANGO">
+                                </div>
+                                <div class="lenguaje-item">
+                                    <img src="img/mysql.png" alt="MySQL">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-proyecto">
+                    <div class="proyecto">
+                        <div class="proyecto-contenido">
+                            <img src="img/preguntasrespuestas.png" alt="PREGUNTAS & RESPUESTAS" class="icono-proyecto">
+                            <h3>Preguntas & Respuestas</h3>
+                            <p>Es un juego de preguntas con diferentes categor&iacute;as, adem&aacute;s de un temporizador para responder la pregunta y una puntuaci&oacute;n por respuesta.</p>
+                        </div>
+                        <div class="hover-efecto">
+                            <h3>Lenguajes Utilizados</h3>
+                            <div class="lenguajes-utilizados">
+                                <div class="lenguaje-item">
+                                    <img src="img/html.png" alt="HTML">
+                                </div>
+                                <div class="lenguaje-item">
+                                    <img src="img/css.png" alt="CSS">
+                                </div>
+                                <div class="lenguaje-item">
+                                    <img src="img/javascript.png" alt="JS">
+                                </div>
+                                <div class="lenguaje-item">
+                                    <img src="img/python.png" alt="PYTHON">
+                                </div>
+                                <div class="lenguaje-item">
+                                    <img src="img/flask.png" alt="FLASK">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posicion-pro"></div>
+                <i class="fas fa-chevron-left anterior-pro"></i>
+                <i class="fas fa-chevron-right siguiente-pro"></i>
+            </div>
+            <h2 class="titulo-proyectos">Mis <span class="titulo-proyectos-abajo">Proyectos</span></h2>
+            <div id="carrusel">
+                <div class="carousel">
+                    <div class="contenedor-imagen">
+                        <img src="img/alpha/1.jpg" alt="" id="imagenCarrusel">
+                    </div>
+                    <div class="indicadores"></div>
+                    <i class="fas fa-chevron-left anterior" onclick="cambiarImagen(-1)"></i>
+                    <i class="fas fa-chevron-right siguiente" onclick="cambiarImagen(1)"></i>
+                </div>
             </div>
         </section>
+        <div class="division"></div>
+        <section id="contenedor-formulario-contacto" class="contenedor-formulario-contacto">
+            <div class="formulario-contacto">
+                <h3>Formulario de Contacto</h3>
+                <form id="miFormulario">
+                    <div class="control">
+                        <div class="labin">
+                            <label for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" name="nombre" onfocus="moverLabelArriba(this)" onblur="restaurarLabel(this)" required>
+                        </div>
+                        <div class="labin">
+                            <label for="correo">Correo electr&oacute;nico</label>
+                            <input type="email" id="correo" name="correo" onfocus="moverLabelArriba(this)" onblur="restaurarLabel(this)" required>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="labin">
+                            <label for="telefono">Tel&eacute;fono</label>
+                            <input type="text" id="telefono" name="telefono" oninput="guionesTelefono(this)" maxlength="12" onfocus="moverLabelArriba(this)" onblur="restaurarLabel(this)" required>
+                        </div>
+                        <div class="labin">
+                            <label for="asunto">Asunto</label>
+                            <input type="text" id="asunto" name="asunto" onfocus="moverLabelArriba(this)" onblur="restaurarLabel(this)" required>
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="labin">
+                            <textarea type="text" id="mensaje" name="mensaje" rows="4" cols="30" placeholder="Mensaje" required></textarea>
+                        </div>
+                        <div class="labin">
+                            <button type="button" onclick="return enviarCorreo()" id="boton-contacto">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="mas-informacion">
+                <div class="mapa">
+                    <h3>M&aacute;s Informaci&oacute;n</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95780.4778683406!2d2.057787353256984!3d41.39276734352977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816718e30e5%3A0x44b0fb3d4f47660a!2sBarcelona!5e0!3m2!1ses!2ses!4v1715983242203!5m2!1ses!2ses" width="350" height="260" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="mis-datos">
+                    <div>
+                        <img src="img/mapa.png" alt="UBICACION" class="img-informacion"> <span>Barcelona</span>
+                    </div>
+                    <div>
+                        <img src="img/correo.png" alt="CORREO" class="img-informacion"> <span>jeironprogrammer@gmail.com</span>
+                    </div>
+                    <div>
+                        <img src="img/telefono.png" alt="TELEFONO" class="img-informacion"> <span>722 37 85 44</span>
+                    </div>
+                </div>
+            </div>
+        </section> 
     </main>
-    <footer id="redes">
-        <h3 class="titulo-redes">Mis Redes Sociales</h3>
-        <div class="redes">
-            <div class="iconos-redes">
-                <a href="https://www.facebook.com/jeironprogrammer/" target="_blank"><img src="img/facebook.png" alt="FACEBOOK" class="img-redes"></a>
-            </div>
-            <div class="iconos-redes">
-                <a href="https://github.com/jeironpro" target="_blank"><img src="img/github.png" alt="GITHUB" class="img-redes"></a>
-            </div>
-            <div class="iconos-redes">
-                <a href="mailto:jeironprogrammer@gmail.com" target="_blank"><img src="img/gmail.png" alt="GMAIL" class="img-redes"></a>
-            </div>
-        </div>
-        <div class="footer-abajo">
-            <p>© 2024 Todos Los Derechos Reservados</p>
-        </div>
-    </footer>
     <script src="https://kit.fontawesome.com/25da21ab57.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){ emailjs.init("4_vNKLkgiocDuDfyv"); 
+    })();
+    </script>
 </body>
 </html>
