@@ -1,5 +1,5 @@
 body {
-    background-color: #d0d0d0;
+    background-color: #e4e4e4;
     font-family: 'Poppins', sans-serif;
     margin: 0;
     overflow-x: hidden;
@@ -7,7 +7,9 @@ body {
 }
 
 header {
-    padding: 0 20px;
+    background-color: #FFF;
+    padding: 8px 20px;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -84,6 +86,10 @@ li:nth-child(3) {
     background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
 }
 
+li:nth-child(4) {
+    background-color: #34a853;
+}
+
 li:hover .titulo-red {
     opacity: 1;
 }
@@ -97,7 +103,7 @@ li:hover .titulo-red {
     width: 95%;
 }
 
-/* SECTION ACERCA DE MI */
+/* ACERCA DE MI */
 #acerca-de {
     align-items: center;
     display: grid;
@@ -181,7 +187,7 @@ li:hover .titulo-red {
     width: 80px;
 }
 
-/* SECTION LENGUAJES APRENDIDOS */
+/* LENGUAJES APRENDIDOS */
 #habilidades {
     align-items: center;
     display: flex;
@@ -199,7 +205,7 @@ li:hover .titulo-red {
 .habilidad {
     border-radius: 50%;
     box-shadow: 0 0 30px inset rgba(0, 0, 0, 0.5);
-    margin: 0 10px;
+    margin: 0 12px;
     overflow: hidden;
     position: relative;
     text-align: center;
@@ -304,80 +310,34 @@ li:hover .titulo-red {
     }
 }
 
-/* SECTION MIS PROYECTOS */
+/* MIS PROYECTOS */
 #proyectos {
-    display: flex;
-    justify-content: space-between;
-    margin: 80px 50px 50px 50px;
-    position: relative;
+    margin: 50px 50px 0 50px;
 }
 
 .titulo-proyectos {
     color: #FF7F00;
     display: flex;
-    flex-direction: column;
-    font-size: 32px;
+    font-size: 30px;
     justify-content: center;
     margin: 0 0 30px 0;
     text-align: center;
 }
 
-.titulo-proyectos-abajo {
-    color: #0294FF;
-}
-
 .proyectos-contenedor {
     cursor: pointer;
     display: flex;
-    height: 350px;
-    position: relative;
-    width: 500px;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .card-proyecto {
     background-color: #fff;
     border-radius: 5px;
-    display: none;
     height: 300px;
-    max-width: 500px;
+    width: 400px;
     overflow: hidden;
-    position: absolute;
     text-align: center;
-}
-
-.card-proyecto.activo {
-    display: block;
-}
-
-.anterior-pro, .siguiente-pro {
-    border: none;
-    color: #FF7F00;
-    cursor: pointer;
-    font-size: 20px;
-    padding: 10px;
-    position: absolute;
-    text-shadow: -2px -2px 2px #000;
-    top: 100%;
-    transform: translateY(-100%);
-}
-
-.anterior-pro {
-    left: 40%;
-}
-
-.siguiente-pro {
-    right: 40%;
-}
-
-.posicion-pro {
-    bottom: 0;
-    color: #333;
-    display: flex;
-    font-size: 18px;
-    font-weight: 700;
-    left: 50%;
-    position: absolute;
-    transform: translate(-60%, -30%);
 }
 
 .proyecto {
@@ -464,23 +424,27 @@ li:hover .titulo-red {
     width: 40px;
 }
 
+/* CARRUSEL */
 .carousel {
-    aspect-ratio: 16/9;
-    position: relative;
-    width: 500px;
+    margin: 50px 0;
+    width: 100%;
 }
 
 .contenedor-imagen {
-    border-radius: 5px;
+    display: flex;
+    justify-content: center;
     overflow: hidden;
-    width: 500px;
+    position: relative;
+    width: 100%;
 }
 
 .carousel img {
+    border-radius: 5px;
     display: block;
-    height: 300px;
+    height: 500px;
+    perspective: 1000px;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    width: 100%;
+    width: 1150px;
 }
 
 .carousel img.hidden {
@@ -495,24 +459,24 @@ li:hover .titulo-red {
     border: none;
     color: #FF7F00;
     cursor: pointer;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 30px;
     position: absolute;
     text-shadow: -2px -2px 2px #000;
-    top: 100%;
+    top: 50%;
 }
 
 .anterior {
-    left: 40%;
+    left: 5px;
 }
 
 .siguiente {
-    right: 40%;
+    right: 5px;
 }
 
-/* SECTION CONTACTO */
+/* CONTACTO */
 .contenedor-formulario-contacto {
     display: flex;
+    margin-bottom: 40px;
     padding: 0px 40px;
 }
 
@@ -521,8 +485,9 @@ li:hover .titulo-red {
     width: 650px;
 }
 
-.formulario-contacto h3 {
-    color: #000;
+.formulario-contacto h3, .mapa h3 {
+    color: #FF7F00;
+    font-size: 30px;
     margin-left: 10px;
     text-align: left;
 }
@@ -561,10 +526,11 @@ li:hover .titulo-red {
 .control textarea {
     border: 2px solid #0294FF;
     border-radius: 4px;
-    color: #FFF;
+    color: #000;
     font-size: 15px;
     font-weight: 600;
     padding-left: 5px;
+    width: 265px;
 }
 
 .control textarea::placeholder {
@@ -598,33 +564,1084 @@ li:hover .titulo-red {
     color: #FF7F00;
 }
 
+/* MAS INFORMACION (UBICADO) */
+
 .mas-informacion {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-left: 30px;
 }
 
+.mas-informacion h3 {
+    color: #FF7F00;
+    font-size: 30px;
+    text-align: left;
+}
+
 .mas-informacion iframe {
-    border-radius: 4px;
-    margin-top: 30px;
+    height: 260px;
+    border-radius: 5px;
+    margin-top: 15px;
+    width: 600px;
 }
 
-.mis-datos {
-    margin: 70px 20px;
-    width: 100%;
+@media screen and (min-width: 1174px) and (max-width: 1324px) {
+    /* ACERCA DE MI */
+    .contenido, .contenedor-despro {
+        padding: 0px 30px;
+    }
+    
+    .contenido {
+        width: 700px;
+    }
+    
+    .contenido::before {
+        height: 180px;
+    }
+    
+    .desarrollador-titulo, .desarrollando {
+        font-size: 28px;
+    }
+    
+    .card {
+        font-size: 18px;
+        width: 700px;
+    }
+    
+    .desarrollador span {
+        font-size: 16px;
+    }
+    
+    .desarrollador .fecha {
+        font-size: 20px;
+    }
+    
+    .fecha .fecha-titulo, .fecha .proyectos-contador {
+        font-size: 13px;
+    }
+    
+    .fecha #años,
+    .fecha #meses,
+    .fecha #dias,
+    .fecha #proyectos-contador {
+        height: 60px;
+        width: 70px;
+    }
+
+    /* LENGUAJES APRENDIDOS */
+    #habilidades {
+        padding: 40px;
+    }
+    
+    .contenedor-habilidades {
+        gap: 120px;
+    }
+
+    /* MIS PROYECTOS */
+    .titulo-proyectos {
+        font-size: 28px;
+        margin: 0 0 25px 0;
+    }
+
+    .card-proyecto {
+        height: 280px;
+        width: 350px;
+    }
+
+    .proyecto-contenido p {
+        font-size: 0.9em;
+    }
+
+    .proyecto-contenido h3 {
+        font-size: 1.2em;
+    }
+
+    .hover-efecto h3 {
+        font-size: 1.1em;
+    }
+
+    .lenguaje-item {
+        height: 34px;
+        width: 34px;
+    }
+
+    .lenguajes-utilizados img {
+        height: 18px;
+        width: 18px;
+    }
+
+    .icono-proyecto {
+        height: 38px;
+        width: 38px;
+    }
+
+    /* CARRUSEL */
+    .carousel img {
+        width: 1000px;
+    }
+    .anterior, .siguiente {
+        font-size: 28px;
+    }
+
+    /* CONTACTO */
+    .formulario-contacto h3 {
+        font-size: 28px;
+    }
+
+    /* MAS INFORMACION (UBICADO) */
+
+    .mas-informacion h3 {
+        font-size: 28px;
+    }
+
+    .mas-informacion iframe {
+        height: 260px;
+        margin-top: 15px;
+        width: 400px;
+    }
 }
 
-.mis-datos div {
-    display: flex;
-    margin: 60px 0;
+@media screen and (max-width: 1173px) {
+    /* HEADER */
+    .img-logo {
+        height: 45px;
+        width: 45px;
+    }
+
+    .nombre {
+        font-size: 22px;
+    }
+
+    li {
+        height: 18px;
+        margin: 0 18px;
+        width: 18px;
+    }
+
+    li .titulo-red {
+        font-size: 13px;
+    }
+
+    /* ACERCA DE MI */
+    .contenido, .contenedor-despro {
+        padding: 0px 25px;
+    }
+    
+    .contenido {
+        width: 650px;
+    }
+    
+    .contenido::before {
+        height: 160px;
+    }
+    
+    .desarrollador-titulo, .desarrollando {
+        font-size: 26px;
+    }
+    
+    .card {
+        font-size: 16px;
+        width: 650px;
+    }
+    
+    .desarrollador span {
+        font-size: 14px;
+    }
+    
+    .desarrollador .fecha {
+        font-size: 18px;
+    }
+    
+    .fecha .fecha-titulo, .fecha .proyectos-contador {
+        font-size: 12px;
+    }
+    
+    .fecha #años,
+    .fecha #meses,
+    .fecha #dias,
+    .fecha #proyectos-contador {
+        height: 55px;
+        width: 65px;
+    }
+
+    /* LENGUAJES APRENDIDOS */
+    #habilidades {
+        padding: 40px;
+    }
+    
+    .contenedor-habilidades {
+        gap: 70px;
+    }
+    
+    .habilidad {
+        margin: 0 20px;
+    }
+    
+    .habilidad:hover::after {
+        font-size: 0.9em;
+    }
+    
+    .icono {
+        height: 80px;
+        width: 80px;
+    }
+    
+    .icono .img-icono {
+        height: 45px;
+        width: 45px;
+    }
+    
+    .habilidad span {
+        font-size: 0.8em;
+    }
+
+    /* MIS PROYECTOS */
+    #proyectos {
+        margin: 50px 30px 0 30px;
+    }
+
+    .titulo-proyectos {
+        font-size: 26px;
+        margin: 0 0 20px 0;
+    }
+
+    .card-proyecto {
+        height: 260px;
+        width: 330px;
+    }
+
+    .proyecto-contenido h3 {
+        font-size: 1.1em;
+    }
+
+    .proyecto-contenido p {
+        font-size: 0.9em;
+    }
+
+    .hover-efecto h3 {
+        font-size: 1em;
+    }
+
+    .lenguaje-item {
+        height: 32px;
+        width: 32px;
+    }
+
+    .lenguajes-utilizados img {
+        height: 16px;
+        width: 16px;
+    }
+
+    .icono-proyecto {
+        height: 36px;
+        width: 36px;
+    }
+
+    /* CARRUSEL */
+    .carousel {
+        margin: 40px 0;
+    }
+    
+    .carousel img {
+        height: 450px;
+        width: 900px;
+    }
+
+    .anterior, .siguiente {
+        font-size: 26px;
+    }
+
+    .anterior {
+        left: 15px;
+    }
+    
+    .siguiente {
+        right: 15px;
+    }
+
+    /* CONTACTO */
+    .formulario-contacto h3 {
+        font-size: 26px;
+    }
+
+    .control input {
+        height: 30px;
+        width: 255px;
+    }
+
+    .control textarea {
+        width: 255px;
+    }
+
+    .labin button {
+        width: 267px;
+    }
+
+    /* MAS INFORMACION (UBICADO) */
+    .mas-informacion h3 {
+        font-size: 26px;
+    }
+
+    .mas-informacion iframe {
+        height: 260px;
+        width: 400px;
+    }
 }
 
-.mis-datos div span {
-    font-weight: 600;
-    margin-left: 5px;
+@media screen and (max-width: 1074px) {
+    /* ACERCA DE MI */
+    .contenido, .contenedor-despro {
+        padding: 0px 20px;
+    }
+    
+    .contenido {
+        width: 530px;
+    }
+    
+    .contenido::before {
+        height: 160px;
+    }
+    
+    .desarrollador-titulo, .desarrollando {
+        font-size: 25px;
+    }
+    
+    .card {
+        font-size: 15px;
+        width: 530px;
+    }
+    
+    .desarrollador span {
+        font-size: 13px;
+    }
+    
+    .desarrollador .fecha {
+        font-size: 16px;
+    }
+    
+    .fecha .fecha-titulo, .fecha .proyectos-contador {
+        font-size: 12px;
+    }
+    
+    .fecha #años,
+    .fecha #meses,
+    .fecha #dias,
+    .fecha #proyectos-contador {
+        height: 52px;
+        width: 62px;
+    }
+
+    /* MIS PROYECTOS */
+    #proyectos {
+        margin: 50px 20px 0 20px;
+    }
+
+    .titulo-proyectos {
+        font-size: 25px;
+        margin: 0 0 15px 0;
+    }
+
+    .card-proyecto {
+        height: 230px;
+        width: 280px;
+    }
+
+    .proyecto-contenido h3 {
+        font-size: 0.9em;
+    }
+
+    .proyecto-contenido p {
+        font-size: 0.7em;
+    }
+
+    .hover-efecto h3 {
+        font-size: 0.8em;
+    }
+
+    .lenguaje-item {
+        height: 26px;
+        width: 26px;
+    }
+
+    .lenguajes-utilizados img {
+        height: 14px;
+        width: 14px;
+    }
+
+    .icono-proyecto {
+        height: 32px;
+        width: 32px;
+    }
+
+    /* CARRUSEL */
+    .carousel {
+        margin: 20px 0;
+    }
+    
+    .carousel img {
+        height: 400px;
+        width: 750px;
+    }
+
+    .anterior, .siguiente {
+        font-size: 26px;
+    }
+
+    /* CONTACTO */
+    .contenedor-formulario-contacto {
+        padding: 0px 20px;
+    }
+
+    .formulario-contacto {
+        width: 500px;
+    }
+
+    .formulario-contacto h3 {
+        font-size: 25px;
+    }
+
+    .control input {
+        width: 225px;
+    }
+
+    .control textarea {
+        width: 225px;
+    }
+
+    .labin button {
+        height: 34px;
+        width: 237px;
+    }
+
+    /* MAS INFORMACION (UBICADO) */
+    .mas-informacion h3 {
+        font-size: 25px;
+    }
+
+    .mas-informacion iframe {
+        height: 250px;
+        width: 350px;
+    }
 }
 
-.mis-datos img {
-    height: 25px;
-    width: 25px;
+@media screen and (max-width: 924px) {
+    /* HEADER */
+    li {
+        height: 16px;
+        margin: 0 16px;
+        width: 16px;
+    }
+
+    /* ACERCA DE MI */
+    .contenido, .contenedor-despro {
+        padding: 0px 15px;
+    }
+    
+    .contenido {
+        width: 470px;
+    }
+    
+    .contenido::before {
+        height: 150px;
+    }
+    
+    .desarrollador-titulo, .desarrollando {
+        font-size: 24px;
+    }
+    
+    .card {
+        font-size: 14px;
+        width: 470px;
+    }
+    
+    .desarrollador span {
+        font-size: 12px;
+    }
+    
+    .desarrollador .fecha {
+        font-size: 15px;
+    }
+    
+    .fecha .fecha-titulo, .fecha .proyectos-contador {
+        font-size: 11px;
+    }
+    
+    .fecha #años,
+    .fecha #meses,
+    .fecha #dias,
+    .fecha #proyectos-contador {
+        height: 48px;
+        width: 58px;
+    }
+
+    /* MIS PROYECTOS */
+    #proyectos {
+        margin: 50px 20px 0 20px;
+    }
+
+    .titulo-proyectos {
+        font-size: 24px;
+        margin: 0 0 15px 0;
+    }
+
+    .card-proyecto {
+        height: 230px;
+        width: 250px;
+    }
+
+    .proyecto-contenido h3 {
+        font-size: 0.9em;
+    }
+
+    .proyecto-contenido p {
+        font-size: 0.7em;
+    }
+
+    .hover-efecto h3 {
+        font-size: 0.8em;
+    }
+
+    .lenguaje-item {
+        height: 22px;
+        width: 22px;
+    }
+
+    .lenguajes-utilizados img {
+        height: 13px;
+        width: 13px;
+    }
+
+    .icono-proyecto {
+        height: 30px;
+        width: 30px;
+    }
+
+    /* CARRUSEL */
+    .carousel img {
+        height: 350px;
+        width: 700px;
+    }
+
+    .anterior, .siguiente {
+        font-size: 24px;
+    }
+
+    /* CONTACTO */
+
+    .formulario-contacto {
+        width: 400px;
+    }
+
+    .formulario-contacto h3 {
+        font-size: 24px;
+    }
+
+    .control input {
+        width: 200px;
+    }
+
+    .control textarea {
+        width: 200px;
+    }
+
+    .labin button {
+        height: 34px;
+        width: 217px;
+    }
+
+    /* MAS INFORMACION (UBICADO) */
+    .mas-informacion {
+        margin-left: 80px;
+    }
+
+    .mas-informacion h3 {
+        font-size: 24px;
+    }
+
+    .mas-informacion iframe {
+        height: 250px;
+        width: 290px;
+    }
+}
+
+@media screen and (max-width: 824px) {
+    /* HEADER */
+    .logo {
+        margin: 0 15px;
+    }
+    
+    .img-logo, .nombre {
+        margin-right: 10px;   
+    }
+
+    .img-logo {
+        height: 42px;
+        width: 42px;
+    }
+
+    .nombre {
+        font-size: 21px;
+    }
+
+    li {
+        height: 15px;
+        margin: 0 15px;
+        width: 15px;
+    }
+
+    li .titulo-red {
+        font-size: 12px;
+    }
+
+    /* ACERCA DE MI */
+    #acerca-de {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .contenido, .contenedor-despro {
+        padding: 0;
+    }
+    
+    .contenido {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 800px;
+    }
+    
+    .contenido::before {
+        display: none;
+    }
+    
+    .desarrollador-titulo, .desarrollando {
+        font-size: 26px;
+    }
+    
+    .card {
+        font-size: 18px;
+        text-align: center;
+        width: 700px;
+    }
+    
+    .desarrollador span {
+        font-size: 18px;
+    }
+    
+    .desarrollador .fecha {
+        font-size: 20px;
+    }
+    
+    .fecha .fecha-titulo, .fecha .proyectos-contador {
+        font-size: 16px;
+    }
+    
+    .fecha #años,
+    .fecha #meses,
+    .fecha #dias,
+    .fecha #proyectos-contador {
+        height: 80px;
+        width: 90px;
+    }
+
+    /* MIS PROYECTOS */
+    #proyectos {
+        margin: 50px 50px 0 50px;
+    }
+
+    .proyectos-contenedor {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .titulo-proyectos {
+        font-size: 26px;
+        margin: 0 0 30px 0;
+    }
+
+    .card-proyecto {
+        height: 350px;
+        margin-top: 30px;
+        width: 650px;
+    }
+
+    .proyecto-contenido h3 {
+        font-size: 1.3em;
+    }
+
+    .proyecto-contenido p {
+        font-size: 1.2em;
+    }
+
+    .hover-efecto h3 {
+        font-size: 1.3em;
+    }
+
+    .lenguaje-item {
+        height: 38px;
+        width: 38px;
+    }
+
+    .lenguajes-utilizados img {
+        height: 20px;
+        width: 20px;
+    }
+
+    .icono-proyecto {
+        height: 40px;
+        width: 40px;
+    }
+
+    /* CARRUSEL */
+    .carousel img {
+        height: 300px;
+        width: 540px;
+    }
+
+    .anterior, .siguiente {
+        font-size: 24px;
+    }
+
+    /* CONTACTO */
+    .contenedor-formulario-contacto {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .formulario-contacto {
+        width: 100%;
+    }
+
+    .formulario-contacto h3 {
+        font-size: 26px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .control {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .control input {
+        font-size: 15px;
+        height: 32px;
+        width: 285px;
+    }
+
+    .control textarea {
+        font-size: 15px;
+        width: 285px;
+    }
+
+    .labin button {
+        font-size: 16px;
+        height: 36px;
+        margin-top: 30px;
+        position: relative;
+        width: 297px;
+    }
+
+    /* MAS INFORMACION (UBICADO) */
+
+    .mas-informacion {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 30px 0;
+        width: 100%;
+    }
+
+    .mas-informacion h3 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .mas-informacion iframe {
+        height: 260px;
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 724px) {
+    /* ACERCA DE MI */
+    .contenido {
+        width: 600px;
+    }
+    
+    .card {
+        width: 600px;
+    }
+
+    /* LENGUAJES APRENDIDOS */
+    .habilidad:hover::after {
+        font-size: 0.8em;
+    }
+    
+    .icono {
+        height: 75px;
+        width: 75px;
+    }
+    
+    .icono .img-icono {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .habilidad span {
+        font-size: 0.7em;
+    }
+
+    /* MIS PROYECTOS */
+    #proyectos {
+        margin: 50px 40px 0 40px;
+    }
+
+    .titulo-proyectos {
+        font-size: 28px;
+        margin: 0 0 25px 0;
+    }
+
+    .card-proyecto {
+        height: 300px;
+        width: 550px;
+    }
+
+    .proyecto-contenido h3 {
+        font-size: 1.2em;
+    }
+
+    .proyecto-contenido p {
+        font-size: 1.1em;
+    }
+
+    .hover-efecto h3 {
+        font-size: 1.2em;
+    }
+
+    .lenguaje-item {
+        height: 36px;
+        width: 36px;
+    }
+
+    .lenguajes-utilizados img {
+        height: 18px;
+        width: 18px;
+    }
+
+    .icono-proyecto {
+        height: 38px;
+        width: 38px;
+    }
+
+    /* CARRUSEL */
+    .carousel img {
+        height: 280px;
+        width: 440px;
+    }
+
+    .anterior, .siguiente {
+        font-size: 22px;
+    }
+
+    /* CONTACTO */
+    .formulario-contacto h3 {
+        font-size: 28px;
+    }
+
+    .control input {
+        height: 32px;
+        width: 265px;
+    }
+
+    .control textarea {
+        width: 265px;
+    }
+
+    .labin button {
+        height: 36px;
+        width: 287px;
+    }
+
+    /* MAS INFORMACION (UBICADO) */
+    .mas-informacion {
+        margin: 30px 0;
+    }
+
+    .mas-informacion h3 {
+        font-size: 26px;
+    }
+
+    .mas-informacion iframe {
+        height: 260px;
+        width: 580px;
+    }
+}
+
+@media screen and (max-width: 624px) {
+    /* HEADER */
+    .img-logo {
+        height: 40px;
+        width: 40px;
+    }
+
+    .nombre {
+        font-size: 17px;
+    }
+
+    li {
+        height: 12px;
+        margin: 0 10px;
+        padding: 8px;
+        width: 12px;
+    }
+
+    li .titulo-red {
+        font-size: 9px;
+    }
+
+    /* ACERCA DE MI */
+    .contenido {
+        width: 500px;
+    }
+    
+    .desarrollador-titulo, .desarrollando {
+        font-size: 24px;
+    }
+    
+    .card {
+        font-size: 15px;
+        width: 450px;
+    }
+    
+    .desarrollador span {
+        font-size: 15px;
+    }
+    
+    .desarrollador .fecha {
+        font-size: 16px;
+    }
+    
+    .fecha .fecha-titulo, .fecha .proyectos-contador {
+        font-size: 13px;
+    }
+    
+    .fecha #años,
+    .fecha #meses,
+    .fecha #dias,
+    .fecha #proyectos-contador {
+        height: 65px;
+        width: 75px;
+    }
+
+    /* MIS PROYECTOS */
+    #proyectos {
+        margin: 50px 30px 0 30px;
+    }
+
+    .titulo-proyectos {
+        font-size: 24px;
+        margin: 0 0 20px 0;
+    }
+
+    .card-proyecto {
+        height: 250px;
+        width: 450px;
+    }
+
+    .proyecto-contenido p {
+        font-size: 1em;
+    }
+
+    .hover-efecto h3 {
+        font-size: 1.1em;
+    }
+
+    .lenguaje-item {
+        height: 35px;
+        width: 35px;
+    }
+
+    .lenguajes-utilizados img {
+        height: 17px;
+        width: 17px;
+    }
+
+    .icono-proyecto {
+        height: 36px;
+        width: 36px;
+    }
+
+    /* CARRUSEL */
+    .carousel img {
+        height: 260px;
+        width: 380px;
+    }
+
+    .anterior, .siguiente {
+        font-size: 20px;
+    }
+
+    .anterior {
+        left: 5px;
+    }
+
+    .siguiente {
+        right: 5px;
+    }
+
+    /* CONTACTO */
+    .formulario-contacto h3 {
+        font-size: 24px;
+    }
+
+    .control input {
+        height: 32px;
+        width: 200px;
+    }
+
+    .control textarea {
+        width: 200px;
+    }
+
+    .labin button {
+        height: 36px;
+        width: 210px;
+    }
+
+    /* MAS INFORMACION (UBICADO) */
+    .mas-informacion h3 {
+        font-size: 24px;
+    }
+
+    .mas-informacion iframe {
+        height: 250px;
+        width: 430px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* HEADER */
+
+    /* ACERCA DE MI */
+
+    /* LENGUAJES APRENDIDOS */
+
+    /* MIS PROYECTOS */
+    
+    /* CARRUSEL */
+
+    /* CONTACTO */
+
+    /* MAS INFORMACION (UBICADO) */
 }
