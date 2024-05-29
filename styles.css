@@ -4,6 +4,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     padding: 0;
+    position: relative;
 }
 
 header {
@@ -1630,18 +1631,142 @@ li:hover .titulo-red {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 499px) {
     /* HEADER */
+    .logo {
+        margin: 0;
+    }
+    
+    .img-logo, .nombre {
+        margin-right: 5px;   
+    }
+
+    .img-logo {
+        height: 32px;
+        width: 32px;
+    }
+
+    .nombre {
+        font-size: 14px;
+    }
+
+    li {
+        height: 10px;
+        margin: 0 12px;
+        padding: 8px;
+        width: 10px;
+    }
+
+    li a i {
+        font-size: 14px;
+    }
+
+    li .titulo-red {
+        font-size: 9px;
+    }
 
     /* ACERCA DE MI */
+    .contenido {
+        width: 450px;
+    }
+    
+    .desarrollador-titulo, .desarrollando {
+        font-size: 20px;
+    }
+    
+    .card {
+        font-size: 14px;
+        width: 350px;
+    }
+    
+    .desarrollador span {
+        font-size: 14px;
+    }
+    
+    .desarrollador .fecha {
+        font-size: 15px;
+    }
+    
+    .fecha .fecha-titulo, .fecha .proyectos-contador {
+        font-size: 12px;
+    }
+    
+    .fecha #años,
+    .fecha #meses,
+    .fecha #dias,
+    .fecha #proyectos-contador {
+        height: 60px;
+        width: 70px;
+    }
 
     /* LENGUAJES APRENDIDOS */
+    #habilidades {
+        padding: 30px;
+    }
+    
+    .contenedor-habilidades {
+        gap: 20px;
+    }
 
     /* MIS PROYECTOS */
+    .titulo-proyectos {
+        font-size: 20px;
+    } 
+
+    .card-proyecto {
+        height: 300px;
+        width: 350px;
+    }
     
     /* CARRUSEL */
+    .carousel img {
+        height: 260px;
+        width: 320px;
+    }
+
+    .anterior {
+        left: 2px;
+    }
+
+    .siguiente {
+        right: 2px;
+    }
 
     /* CONTACTO */
+    .formulario-contacto h3 {
+        font-size: 20px;
+    }
+
+    .control {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .control input {
+        margin-top: 20px;
+        width: 320px;
+    }
+
+    .control textarea {
+        width: 320px;
+    }
+
+    .control textarea::placeholder {
+        top: 50%;
+        transform: translateY(-10%);
+    }
+
+    .labin button {
+        color: #fff;
+        width: 320px;
+    }
 
     /* MAS INFORMACION (UBICADO) */
+    .mas-informacion h3 {
+        font-size: 20px;
+    }
+
+    .mas-informacion iframe {
+        width: 320px;
+    }
 }
