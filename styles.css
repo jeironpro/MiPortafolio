@@ -4,7 +4,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     padding: 0;
-    /* position: relative; */
+    position: relative;
 }
 
 header {
@@ -1631,7 +1631,7 @@ li:hover .titulo-red {
     }
 }
 
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 500px) {
     /* HEADER */
     .logo {
         margin: 0;
