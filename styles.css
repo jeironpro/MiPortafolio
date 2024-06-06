@@ -1633,6 +1633,10 @@ li:hover .titulo-red {
 
 @media screen and (max-width: 500px) {
     /* HEADER */
+    main {
+        margin: 0 auto;
+    }
+    
     .logo {
         margin: 0;
     }
