@@ -1633,14 +1633,6 @@ li:hover .titulo-red {
 
 @media screen and (max-width: 500px) {
     /* HEADER */
-    main {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
-    }
-
     .logo {
         margin: 0;
     }
