@@ -1635,8 +1635,9 @@ li:hover .titulo-red {
     /* HEADER */
     main {
         margin: 0 auto;
+        width: 100%;
     }
-    
+
     .logo {
         margin: 0;
     }
