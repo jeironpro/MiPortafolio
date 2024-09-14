@@ -1,349 +1,617 @@
-body {
-    background-color: #e4e4e4;
-    font-family: 'Poppins', sans-serif;
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
-    overflow-x: hidden;
     padding: 0;
-    position: relative;
+}
+
+body {
+    background-color: #F0F0F0;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
 }
 
 header {
-    background-color: #FFF;
-    padding: 8px 20px;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+    height: 100%;
+    overflow: hidden;
+    width: 350px;
 }
 
-nav {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
+/* PRESENTACION */
+.contenedor_presentacion {
+    height: 100%;
     width: 100%;
 }
 
-.logo {
+.logo_titulo .imagen {
     align-items: center;
     display: flex;
-    margin: 0 20px;
+    justify-content: center;
 }
 
-.img-logo, .nombre {
-    margin-right: 15px;   
+.logo_titulo img {
+    border: 3px solid #000;
+    border-radius: 5px;
+    height: 150px;
+    margin-top: 10px;
+    perspective: 1000px;
+    width: 190px;
 }
 
-.img-logo {
-    height: 50px;
-    width: 50px;
+.logo_titulo h1 {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0px 5px 0px;
+    text-align: center;
 }
 
-.nombre {
-    font-size: 24px;
-    font-weight: 800;
-}
-
-ul {
-    display: inline-flex;
-    list-style-type: none;
-    margin-right: 20px;
-}
-
-li {
+.ocupacion {
     align-items: center;
-    background: #000;
-    border-radius: 50%;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.ocupacion span {
+    background-color: #007BFF;
+    border-radius: 3px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.contenedor_redes {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor_redes a {
+    align-items: center;
+    background-color: #F0F0F9;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: #000;
     cursor: pointer;
     display: flex;
-    height: 20px;
+    height: 30px;
     justify-content: center;
-    margin: 0 20px;
-    padding: 10px;
-    position: relative;
-    width: 20px;
+    margin: 0 8px;
+    transition: all .2s ease;
+    text-decoration: none;
+    width: 30px;
 }
 
-li a {
+.contenedor_redes a:hover i {
     color: #FFF;
 }
 
-li .titulo-red {
-    font-size: 14px;
-    opacity: 0;
-    position: absolute;
-    top: calc(100% + 5px);
+.contenedor_redes a:nth-child(1):hover {
+    background-color: #1877F2;
 }
 
-li:nth-child(1) {
-    background-color: #0294FF;
+.contenedor_redes a:nth-child(2):hover {
+    background-color: #000;
 }
 
-li:nth-child(2) {
-    background-color: #444;
+.contenedor_redes a:nth-child(3):hover {
+    background-color: #1DA1F2;
 }
 
-li:nth-child(3) {
-    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+.contenedor_redes a:nth-child(4):hover {
+    background-color: #C13584;
 }
 
-li:nth-child(4) {
-    background-color: #34a853;
+.contenedor_redes a:hover {
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-li:hover .titulo-red {
-    opacity: 1;
+.contenedor_redes i {
+    font-size: 18px;
 }
 
-/* DIVISION */
-.division {
-    background-color: #FF7F00;
-    border-radius: 60%;
-    height: 6px;
-    margin: 0 auto;
-    width: 95%;
+.fa-facebook-f {
+    color: #1877F2;
 }
 
-/* ACERCA DE MI */
-#acerca-de {
+.fa-github {
+    color: #000;
+}
+
+.fa-twitter {
+    color: #1DA1F2;
+}
+
+.fa-instagram {
+    color: #C13584;
+}
+
+.contenedor_contacto {
     align-items: center;
+    background-color: #F0F0F0;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 20px 5px 20px;
+}
+
+.contenedor_contacto .informacion {
+    border-bottom: 2px solid #F9F9F9;
+    border-radius: 3px;
+    display: flex;
+    margin: 6px 0;
+    padding: 10px;
+    width: 100%;
+}
+
+.contenedor_contacto .informacion:last-child {
+    border-bottom: none;
+}
+
+.contenedor_contacto .icono_informacion {
+    align-items: center;
+    background-color: #F9F9F9;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    width: 35px;
+}
+
+.contenedor_contacto .datos {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.contenedor_contacto .datos span:nth-child(1) {
+    font-weight: 500;
+}
+
+.contenedor_contacto .datos span:nth-child(2) {
+    font-weight: 600;
+}
+
+.fa-phone {
+    color: #007BFF;
+}
+
+.fa-envelope {
+    color: #FD7E14;
+}
+
+.fa-location-dot {
+    color: #DC3545;
+}
+
+.fa-calendar {
+    color: #6C757D;
+}
+
+.contenedor_presentacion .contenedor_boton {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor_presentacion button {
+    background-color: #007BFF;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: #FFF;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 10px;
+    width: 200px;
+}
+
+.contenedor_presentacion button:hover {
+    background-color: #FFF;
+    color: #007BFF;
+}
+
+main {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+}
+
+.contenedor_navegacion {
+    display: flex;
+    width: 100%;
+}
+
+.contenedor_navegacion nav {
+    align-items: center;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contenedor_navegacion nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.contenedor_navegacion nav li {
+    display: flex;
+}
+
+.contenedor_navegacion a.enlace_activo {
+    background-color: #FFF;
+    color: #007BFF;
+}
+
+.contenedor_navegacion nav a {
+    align-items: center;
+    background-color: #007BFF;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    color: #FFF;
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    height: 40px;
+    justify-content: center;
+    text-decoration: none;
+    width: 200px;
+}
+
+.contenedor_navegacion nav a:hover {
+    background-color: #FFF;
+    color: #007BFF;
+}
+
+.contenedor_navegacion nav a i {
+    margin: 0 5px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor_principal {
+    background-color: #F9F9F9;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    margin-top: 30px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.contenedor_principal.activo {
+    display: flex;
+}
+
+/* ACERCA DE Y DESARROLLANDO */
+.contenedor_acercade_desarrollando {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 40px;
-    padding: 0;
+    padding: 20px;
 }
 
-.contenido, .contenedor-despro {
-    padding: 0px 40px;
-    position: relative;
+.contenedor_acercade .titulo_linea,
+.contenedor_desarrollando .titulo_linea {
+    align-items: center;
+    display: flex;
 }
 
-.contenido {
-    width: 750px;
-}
-
-.contenido::before {
-    background-color: #FF7F00;
-    border-radius: 10px;
-    content: '';
-    height: 200px;
-    left: 100%;
-    position: absolute;
-    width: 3px;
-}
-
-.contenedor-despro {
-    margin-bottom: 40px;
-}
-
-.desarrollador-titulo, .desarrollando {
-    color: #FF7F00;
-    font-size: 30px;
-}
-
-.card {
+.contenedor_acercade .titulo_linea div,
+.contenedor_desarrollando .titulo_linea div {
+    align-items: center;
+    background-color: #DC3545;
     border-radius: 5px;
-    font-size: 20px;
-    font-weight: 600;
-    width: 750px;
+    display: flex;
+    height: 2px;
+    justify-content: center;
+    margin-left: 10px;
+    width: 300px;
+}
+
+.contenedor_acercade p {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 5px;
+    text-align: justify;
+    width: 440px;
+}
+
+.contenedor_desarrollando h3 {
+    margin-left: 40px;
 }
 
 .desarrollador {
+    margin-top: 5px;
     text-align: center;
 }
 
 .desarrollador span {
+    align-items: center;
     display: block;
     font-size: 18px;
+    justify-content: space-evenly;
     margin-bottom: 10px;
+    padding: 5px;
     position: relative;
 }
 
 .desarrollador .fecha {
     align-items: center;
-    color: #4ecee2;
+    color: #FFF;
     display: flex;
-    flex-direction: row;
     font-size: 22px;
-    justify-content: center;
+    font-weight: 600;
+    flex-direction: row;
 }
 
-.fecha .fecha-titulo, .fecha .proyectos-contador {
+.desarrollador span div {
+    color: #000;
+}
+
+.fecha .fecha-titulo {
     box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
-    color: #fff;
+    color: #FFF;
     font-size: 15px;
 }
 
 .fecha #años,
 .fecha #meses,
-.fecha #dias,
-.fecha #proyectos-contador {
-    background-color: #333;
+.fecha #dias {
+    background-color: #DC3545;
     border-radius: 3px;
     box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1);
     display: flex;
-    height: 70px;
     flex-direction: column;
+    height: 70px;
+    justify-content: center;
     margin: 0 5px;
     width: 80px;
 }
 
-/* LENGUAJES APRENDIDOS */
-#habilidades {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-}
-
-.contenedor-habilidades {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 50px;
+/* HABILIDADES */
+.contenedor_habilidades {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 20px;
+    width: 100%;
 }
 
 .habilidad {
-    border-radius: 50%;
-    box-shadow: 0 0 30px inset rgba(0, 0, 0, 0.5);
-    margin: 0 12px;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-}
-
-.habilidad:hover::after {
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    color: #fff;
-    content: attr(data-nivel);
+    background-color: rgba(108, 117, 125, 0.3);
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
     display: flex;
-    font-size: 1em;
-    font-weight: bold;
-    height: 100%;
-    justify-content: center;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 3;
+    height: 150px;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 20px;
 }
 
 .habilidad:nth-child(1) {
-    border: 10px solid #FF7F00;
+    background-color: rgba(0, 45, 98, 0.2);
 }
 
 .habilidad:nth-child(2) {
-    border: 10px solid #0294FF;
+    background-color: rgba(206, 17, 38, 0.2);
 }
 
 .habilidad:nth-child(3) {
-    border: 10px solid #FEC000;
+    background-color: rgba(206, 17, 38, 0.2);
 }
 
 .habilidad:nth-child(4) {
-    border: 10px solid #4ecee2;
+    background-color: rgba(0, 45, 98, 0.2);
 }
 
-.habilidad:nth-child(5) {
-    border: 10px solid #FF4848;
+.habilidad i {
+    font-size: 20px;
+    text-shadow: 2px 2px rgba(255, 255, 255, 0.4);
 }
 
-.habilidad:nth-child(6) {
-    border: 10px solid #FF2F25;
+.habilidad .titulo_descripcion {
+    font-size: 16px;
+    margin-left: 5px;
 }
 
-.icono {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 90px;
-    justify-content: center;
-    padding: 10px;
-    position: relative;
-    width: 90px;
+.habilidad .titulo_descripcion h4 {
+    margin: 0;
 }
 
-.icono .img-icono {
-    height: 50px;
-    width: 50px;
-}
-
-.habilidad span {
-    color: #000;
-    display: block;
-    font-size: 0.9em;
-    font-weight: 700;
+.habilidad .titulo_descripcion p {
+    font-weight: 500;
     margin-top: 5px;
 }
 
-.habilidad::before {
-    animation: wave 2s infinite;
-    background-color: #0077be;
-    content: "";
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: var(--porcentaje);
+.fa-layer-group {
+    color: #6A0DAD;
+}
+
+.fa-code {
+    color: #E67E22;
+}
+
+.fa-server {
+    color: #28A745;
+}
+
+.fa-database {
+    color: #3498DB;
+}
+
+/* LENGUAJES APRENDIDOS */
+.lenguaje {
+    background-color: rgba(108, 117, 125, 0.3);
+    border-radius: 3px;
+    display: flex;
+    height: 86px;
+    justify-content: space-between;
+    margin: 2px 0;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
     width: 100%;
 }
 
-.habilidad .porcentaje {
-    font-size: 0.7em;
-    font-weight: 500;
-    left: 50%;
+.lenguaje:first-child {
+    margin: 0;
+}
+
+.lenguaje::before {
+    animation: wave 2s infinite;
+    background-color: #007BFF;
+    content: "";
+    height: 100%;
     position: absolute;
-    top: 85%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.lenguaje[data-porcentaje="10"]::before {
+    right: 90%;
+}
+
+.lenguaje[data-porcentaje="20"]::before {
+    right: 80%;
+}
+
+.lenguaje[data-porcentaje="30"]::before {
+    right: 70%;
+}
+
+.lenguaje[data-porcentaje="40"]::before {
+    right: 60%;
+}
+
+.lenguaje[data-porcentaje="50"]::before {
+    right: 50%;
+}
+
+.lenguaje[data-porcentaje="60"]::before {
+    right: 40%;
+}
+
+.lenguaje[data-porcentaje="70"]::before {
+    right: 30%;
+}
+
+.lenguaje[data-porcentaje="80"]::before {
+    right: 20%;
+}
+
+.lenguaje[data-porcentaje="90"]::before {
+    right: 10%;
+}
+
+.lenguaje[data-porcentaje="100"]::before {
+    right: 0%;
 }
 
 @keyframes wave {
     0% {
-        transform: translateY(0);
+        transform: translateX(0);
     }
     50% {
-        transform: translateY(-5px);
+        transform: translateX(-15px);
     }
     100% {
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
-/* MIS PROYECTOS */
-#proyectos {
-    margin: 50px 50px 0 50px;
-}
-
-.titulo-proyectos {
-    color: #FF7F00;
+.lenguaje .icono {
+    align-items: center;
     display: flex;
-    font-size: 30px;
     justify-content: center;
-    margin: 0 0 30px 0;
-    text-align: center;
+    z-index: 1;
 }
 
+.lenguaje .icono span {
+    font-size: 18px;
+    font-weight: 600;
+    height: 20px;
+    margin-left: 10px;
+    width: 20px;
+    z-index: 1;
+}
+
+.lenguaje .porcentaje {
+    font-weight: 500;
+    z-index: 1;
+}
+
+.lenguaje img {
+    filter: drop-shadow(5px 5px rgba(0, 0, 0, 0.2));
+    height: 55px;
+    width: 55px;
+}
+
+
+/* PROYECTOS */
 .proyectos-contenedor {
+    box-sizing: border-box;
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    height: 100%;
     width: 100%;
 }
 
 .card-proyecto {
-    background-color: #fff;
-    border-radius: 5px;
-    height: 300px;
-    width: 400px;
+    box-sizing: border-box;
+    height: 100%;
+    min-height: 265px;
     overflow: hidden;
     text-align: center;
+}
+
+.card-proyecto:nth-child(1) {
+    background-color: rgba(10, 50, 90, 0.2);
+}
+
+.card-proyecto:nth-child(2) {
+    background-color: rgba(205, 20, 40, 0.2);
+}
+
+.card-proyecto:nth-child(3) {
+    background-color: rgba(205, 20, 40, 0.2);
 }
 
 .proyecto {
     height: 100%;
     position: relative;
+}
+
+.icono-proyecto {
+    filter: drop-shadow(5px 5px rgba(0, 0, 0, 0.2));
+    height: 40px;
+    margin-bottom: 5px;
+    width: 40px;
 }
 
 .proyecto-contenido {
@@ -357,11 +625,14 @@ li:hover .titulo-red {
 }
 
 .proyecto-contenido p {
+    font-weight: 500;
+    margin-top: 10px;
     width: 90%;
 }
 
 .proyecto-contenido h3 {
     font-size: 1.3em;
+    margin-top: 5px;
 }
 
 .card-proyecto:hover .proyecto-contenido {
@@ -375,9 +646,9 @@ li:hover .titulo-red {
     flex-direction: column;
     height: 100%;
     justify-content: center;
-    position: absolute;
     left: 0;
     opacity: 0;
+    position: absolute;
     top: 0;
     transition: opacity 0.3s ease-out;
     width: 100%;
@@ -408,6 +679,7 @@ li:hover .titulo-red {
     display: flex;
     height: 38px;
     justify-content: center;
+    margin-top: 20px;
     overflow: hidden;
     width: 38px;
 }
@@ -419,1354 +691,122 @@ li:hover .titulo-red {
     width: 20px;
 }
 
-.icono-proyecto {
-    height: 40px;
-    margin-bottom: 10px;
-    width: 40px;
-}
 
-/* CARRUSEL */
-.carousel {
-    margin: 50px 0;
-    width: 100%;
-}
-
-.contenedor-imagen {
+.paginacion_proyectos {
+    align-items: center;
     display: flex;
+    height: 100%;
     justify-content: center;
-    overflow: hidden;
-    position: relative;
     width: 100%;
 }
 
-.carousel img {
+.paginacion_proyectos button {
+    background-color: #007BFF;
+    border: none;
     border-radius: 5px;
-    display: block;
-    height: 500px;
-    perspective: 1000px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    width: 1150px;
-}
-
-.carousel img.hidden {
-    opacity: 0;
-}
-
-.carousel img.visible {
-    opacity: 1;
-}
-
-.anterior, .siguiente {
-    border: none;
-    color: #FF7F00;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    color: #FFF;
     cursor: pointer;
-    font-size: 30px;
-    position: absolute;
-    text-shadow: -2px -2px 2px #000;
-    top: 50%;
-}
-
-.anterior {
-    left: 5px;
-}
-
-.siguiente {
-    right: 5px;
-}
-
-/* CONTACTO */
-.contenedor-formulario-contacto {
-    display: flex;
-    margin-bottom: 40px;
-    padding: 0px 40px;
-}
-
-.formulario-contacto {
-    position: relative;
-    width: 650px;
-}
-
-.formulario-contacto h3, .mapa h3 {
-    color: #FF7F00;
-    font-size: 30px;
-    margin-left: 10px;
-    text-align: left;
-}
-
-.control {
-    display: flex;
-    margin-top: 50px;
-    position: relative;
-}
-
-.control .labin {
-    margin: 0 10px;
-    position: relative;
-}
-
-.labin label {
-    font-weight: 600;
-    left: 4px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: top 0.3s ease;
-}
-
-.control input {
-    border: 2px solid #0294FF;
-    border-radius: 4px;
-    color: #000;
-    font-size: 15px;
-    font-weight: 600;
-    height: 32px;
-    padding-left: 5px;
-    width: 265px;
-}
-
-.control textarea {
-    border: 2px solid #0294FF;
-    border-radius: 4px;
-    color: #000;
-    font-size: 15px;
-    font-weight: 600;
-    padding-left: 5px;
-    width: 265px;
-}
-
-.control textarea::placeholder {
-    color: #000;
-    font-size: 18px;
-    font-weight: 700;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.control textarea:focus::placeholder {
-    visibility: hidden;
-}
-
-.labin button {
-    background-color: #0294FF;
-    border: none;
-    border-radius: 4px;
     font-size: 16px;
     font-weight: 600;
-    height: 36px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(0%);
-    width: 277px;
+    height: 30px;
+    margin: 0 10px;
+    width: 30px;
 }
 
-.labin button:hover {
-    background-color: #000;
-    color: #FF7F00;
+.paginacion_proyectos button:hover {
+    background-color: #FFF;
+    color: #007BFF;
 }
 
-/* MAS INFORMACION (UBICADO) */
+.paginacion_proyectos span {
+    font-size: 16px;
+    font-weight: 500;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
 
-.mas-informacion {
+/* FORMULARIO DE CONTACTO */
+.formularioContacto {
+    align-items: center;
     display: flex;
     flex-direction: column;
+    height: 100%;
     justify-content: center;
-    margin-left: 30px;
+    z-index: 100;
+    width: 100%;
 }
 
-.mas-informacion h3 {
-    color: #FF7F00;
-    font-size: 30px;
-    text-align: left;
+.formularioContacto .control, 
+.formularioContacto button {
+    margin: 15px 0;
 }
 
-.mas-informacion iframe {
-    height: 260px;
+.formularioContacto .control, 
+.formularioContacto .nomape {
+    display: flex;
+    flex-direction: column;
+}
+
+.formularioContacto .contenedor_nomape {
+    display: flex;
+}
+
+.formularioContacto .contenedor_nomape .nomape {
+    margin: 0 10px;
+}
+
+.formularioContacto .contenedor_nomape input {
+    width: 240px;
+}
+
+.formularioContacto label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.formularioContacto input {
+    height: 28px;
+    margin-top: 5px;
+}
+
+.formularioContacto input, 
+.formularioContacto textarea {
+    background-color: transparent;
+    border: 1px solid #007BFF;
     border-radius: 5px;
-    margin-top: 15px;
-    width: 600px;
+    font-weight: 400;
+    padding-left: 5px;
+    width: 500px;
 }
 
-@media screen and (min-width: 1174px) and (max-width: 1324px) {
-    /* ACERCA DE MI */
-    .contenido, .contenedor-despro {
-        padding: 0px 30px;
-    }
-    
-    .contenido {
-        width: 700px;
-    }
-    
-    .contenido::before {
-        height: 180px;
-    }
-    
-    .desarrollador-titulo, .desarrollando {
-        font-size: 28px;
-    }
-    
-    .card {
-        font-size: 18px;
-        width: 700px;
-    }
-    
-    .desarrollador span {
-        font-size: 16px;
-    }
-    
-    .desarrollador .fecha {
-        font-size: 20px;
-    }
-    
-    .fecha .fecha-titulo, .fecha .proyectos-contador {
-        font-size: 13px;
-    }
-    
-    .fecha #años,
-    .fecha #meses,
-    .fecha #dias,
-    .fecha #proyectos-contador {
-        height: 60px;
-        width: 70px;
-    }
-
-    /* LENGUAJES APRENDIDOS */
-    #habilidades {
-        padding: 40px;
-    }
-    
-    .contenedor-habilidades {
-        gap: 120px;
-    }
-
-    /* MIS PROYECTOS */
-    .titulo-proyectos {
-        font-size: 28px;
-        margin: 0 0 25px 0;
-    }
-
-    .card-proyecto {
-        height: 280px;
-        width: 350px;
-    }
-
-    .proyecto-contenido p {
-        font-size: 0.9em;
-    }
-
-    .proyecto-contenido h3 {
-        font-size: 1.2em;
-    }
-
-    .hover-efecto h3 {
-        font-size: 1.1em;
-    }
-
-    .lenguaje-item {
-        height: 34px;
-        width: 34px;
-    }
-
-    .lenguajes-utilizados img {
-        height: 18px;
-        width: 18px;
-    }
-
-    .icono-proyecto {
-        height: 38px;
-        width: 38px;
-    }
-
-    /* CARRUSEL */
-    .carousel img {
-        width: 1000px;
-    }
-    .anterior, .siguiente {
-        font-size: 28px;
-    }
-
-    /* CONTACTO */
-    .formulario-contacto h3 {
-        font-size: 28px;
-    }
-
-    /* MAS INFORMACION (UBICADO) */
-
-    .mas-informacion h3 {
-        font-size: 28px;
-    }
-
-    .mas-informacion iframe {
-        height: 260px;
-        margin-top: 15px;
-        width: 400px;
-    }
+.formularioContacto input:focus,
+.formularioContacto textarea:focus {
+    border: none;
+    outline: 1px solid #000;
 }
 
-@media screen and (max-width: 1173px) {
-    /* HEADER */
-    .img-logo {
-        height: 45px;
-        width: 45px;
-    }
-
-    .nombre {
-        font-size: 22px;
-    }
-
-    li {
-        height: 18px;
-        margin: 0 18px;
-        width: 18px;
-    }
-
-    li .titulo-red {
-        font-size: 13px;
-    }
-
-    /* ACERCA DE MI */
-    .contenido, .contenedor-despro {
-        padding: 0px 25px;
-    }
-    
-    .contenido {
-        width: 650px;
-    }
-    
-    .contenido::before {
-        height: 160px;
-    }
-    
-    .desarrollador-titulo, .desarrollando {
-        font-size: 26px;
-    }
-    
-    .card {
-        font-size: 16px;
-        width: 650px;
-    }
-    
-    .desarrollador span {
-        font-size: 14px;
-    }
-    
-    .desarrollador .fecha {
-        font-size: 18px;
-    }
-    
-    .fecha .fecha-titulo, .fecha .proyectos-contador {
-        font-size: 12px;
-    }
-    
-    .fecha #años,
-    .fecha #meses,
-    .fecha #dias,
-    .fecha #proyectos-contador {
-        height: 55px;
-        width: 65px;
-    }
-
-    /* LENGUAJES APRENDIDOS */
-    #habilidades {
-        padding: 40px;
-    }
-    
-    .contenedor-habilidades {
-        gap: 70px;
-    }
-    
-    .habilidad {
-        margin: 0 20px;
-    }
-    
-    .habilidad:hover::after {
-        font-size: 0.9em;
-    }
-    
-    .icono {
-        height: 80px;
-        width: 80px;
-    }
-    
-    .icono .img-icono {
-        height: 45px;
-        width: 45px;
-    }
-    
-    .habilidad span {
-        font-size: 0.8em;
-    }
-
-    /* MIS PROYECTOS */
-    #proyectos {
-        margin: 50px 30px 0 30px;
-    }
-
-    .titulo-proyectos {
-        font-size: 26px;
-        margin: 0 0 20px 0;
-    }
-
-    .card-proyecto {
-        height: 260px;
-        width: 330px;
-    }
-
-    .proyecto-contenido h3 {
-        font-size: 1.1em;
-    }
-
-    .proyecto-contenido p {
-        font-size: 0.9em;
-    }
-
-    .hover-efecto h3 {
-        font-size: 1em;
-    }
-
-    .lenguaje-item {
-        height: 32px;
-        width: 32px;
-    }
-
-    .lenguajes-utilizados img {
-        height: 16px;
-        width: 16px;
-    }
-
-    .icono-proyecto {
-        height: 36px;
-        width: 36px;
-    }
-
-    /* CARRUSEL */
-    .carousel {
-        margin: 40px 0;
-    }
-    
-    .carousel img {
-        height: 450px;
-        width: 900px;
-    }
-
-    .anterior, .siguiente {
-        font-size: 26px;
-    }
-
-    .anterior {
-        left: 15px;
-    }
-    
-    .siguiente {
-        right: 15px;
-    }
-
-    /* CONTACTO */
-    .formulario-contacto h3 {
-        font-size: 26px;
-    }
-
-    .control input {
-        height: 30px;
-        width: 255px;
-    }
-
-    .control textarea {
-        width: 255px;
-    }
-
-    .labin button {
-        width: 267px;
-    }
-
-    /* MAS INFORMACION (UBICADO) */
-    .mas-informacion h3 {
-        font-size: 26px;
-    }
-
-    .mas-informacion iframe {
-        height: 260px;
-        width: 400px;
-    }
+.formularioContacto textarea::placeholder {
+    color: #000;
+    font-weight: 600;
 }
 
-@media screen and (max-width: 1074px) {
-    /* ACERCA DE MI */
-    .contenido, .contenedor-despro {
-        padding: 0px 20px;
-    }
-    
-    .contenido {
-        width: 530px;
-    }
-    
-    .contenido::before {
-        height: 160px;
-    }
-    
-    .desarrollador-titulo, .desarrollando {
-        font-size: 25px;
-    }
-    
-    .card {
-        font-size: 15px;
-        width: 530px;
-    }
-    
-    .desarrollador span {
-        font-size: 13px;
-    }
-    
-    .desarrollador .fecha {
-        font-size: 16px;
-    }
-    
-    .fecha .fecha-titulo, .fecha .proyectos-contador {
-        font-size: 12px;
-    }
-    
-    .fecha #años,
-    .fecha #meses,
-    .fecha #dias,
-    .fecha #proyectos-contador {
-        height: 52px;
-        width: 62px;
-    }
-
-    /* MIS PROYECTOS */
-    #proyectos {
-        margin: 50px 20px 0 20px;
-    }
-
-    .titulo-proyectos {
-        font-size: 25px;
-        margin: 0 0 15px 0;
-    }
-
-    .card-proyecto {
-        height: 230px;
-        width: 280px;
-    }
-
-    .proyecto-contenido h3 {
-        font-size: 0.9em;
-    }
-
-    .proyecto-contenido p {
-        font-size: 0.7em;
-    }
-
-    .hover-efecto h3 {
-        font-size: 0.8em;
-    }
-
-    .lenguaje-item {
-        height: 26px;
-        width: 26px;
-    }
-
-    .lenguajes-utilizados img {
-        height: 14px;
-        width: 14px;
-    }
-
-    .icono-proyecto {
-        height: 32px;
-        width: 32px;
-    }
-
-    /* CARRUSEL */
-    .carousel {
-        margin: 20px 0;
-    }
-    
-    .carousel img {
-        height: 400px;
-        width: 750px;
-    }
-
-    .anterior, .siguiente {
-        font-size: 26px;
-    }
-
-    /* CONTACTO */
-    .contenedor-formulario-contacto {
-        padding: 0px 20px;
-    }
-
-    .formulario-contacto {
-        width: 500px;
-    }
-
-    .formulario-contacto h3 {
-        font-size: 25px;
-    }
-
-    .control input {
-        width: 225px;
-    }
-
-    .control textarea {
-        width: 225px;
-    }
-
-    .labin button {
-        height: 34px;
-        width: 237px;
-    }
-
-    /* MAS INFORMACION (UBICADO) */
-    .mas-informacion h3 {
-        font-size: 25px;
-    }
-
-    .mas-informacion iframe {
-        height: 250px;
-        width: 350px;
-    }
+.formularioContacto button {
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    color: #FFF;
+    font-weight: 600;
+    font-size: 16px;
+    height: 34px;
+    width: 500px;
 }
 
-@media screen and (max-width: 924px) {
-    /* HEADER */
-    li {
-        height: 16px;
-        margin: 0 16px;
-        width: 16px;
-    }
-
-    /* ACERCA DE MI */
-    .contenido, .contenedor-despro {
-        padding: 0px 15px;
-    }
-    
-    .contenido {
-        width: 470px;
-    }
-    
-    .contenido::before {
-        height: 150px;
-    }
-    
-    .desarrollador-titulo, .desarrollando {
-        font-size: 24px;
-    }
-    
-    .card {
-        font-size: 14px;
-        width: 470px;
-    }
-    
-    .desarrollador span {
-        font-size: 12px;
-    }
-    
-    .desarrollador .fecha {
-        font-size: 15px;
-    }
-    
-    .fecha .fecha-titulo, .fecha .proyectos-contador {
-        font-size: 11px;
-    }
-    
-    .fecha #años,
-    .fecha #meses,
-    .fecha #dias,
-    .fecha #proyectos-contador {
-        height: 48px;
-        width: 58px;
-    }
-
-    /* MIS PROYECTOS */
-    #proyectos {
-        margin: 50px 20px 0 20px;
-    }
-
-    .titulo-proyectos {
-        font-size: 24px;
-        margin: 0 0 15px 0;
-    }
-
-    .card-proyecto {
-        height: 230px;
-        width: 250px;
-    }
-
-    .proyecto-contenido h3 {
-        font-size: 0.9em;
-    }
-
-    .proyecto-contenido p {
-        font-size: 0.7em;
-    }
-
-    .hover-efecto h3 {
-        font-size: 0.8em;
-    }
-
-    .lenguaje-item {
-        height: 22px;
-        width: 22px;
-    }
-
-    .lenguajes-utilizados img {
-        height: 13px;
-        width: 13px;
-    }
-
-    .icono-proyecto {
-        height: 30px;
-        width: 30px;
-    }
-
-    /* CARRUSEL */
-    .carousel img {
-        height: 350px;
-        width: 700px;
-    }
-
-    .anterior, .siguiente {
-        font-size: 24px;
-    }
-
-    /* CONTACTO */
-
-    .formulario-contacto {
-        width: 400px;
-    }
-
-    .formulario-contacto h3 {
-        font-size: 24px;
-    }
-
-    .control input {
-        width: 200px;
-    }
-
-    .control textarea {
-        width: 200px;
-    }
-
-    .labin button {
-        height: 34px;
-        width: 217px;
-    }
-
-    /* MAS INFORMACION (UBICADO) */
-    .mas-informacion {
-        margin-left: 80px;
-    }
-
-    .mas-informacion h3 {
-        font-size: 24px;
-    }
-
-    .mas-informacion iframe {
-        height: 250px;
-        width: 290px;
-    }
+.formularioContacto button:hover {
+    background-color: #FFF;
+    color: #007BFF;
 }
 
-@media screen and (max-width: 824px) {
-    /* HEADER */
-    .logo {
-        margin: 0 15px;
-    }
-    
-    .img-logo, .nombre {
-        margin-right: 10px;   
-    }
-
-    .img-logo {
-        height: 42px;
-        width: 42px;
-    }
-
-    .nombre {
-        font-size: 21px;
-    }
-
-    li {
-        height: 15px;
-        margin: 0 15px;
-        width: 15px;
-    }
-
-    li .titulo-red {
-        font-size: 12px;
-    }
-
-    /* ACERCA DE MI */
-    #acerca-de {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-    .contenido, .contenedor-despro {
-        padding: 0;
-    }
-    
-    .contenido {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 800px;
-    }
-    
-    .contenido::before {
-        display: none;
-    }
-    
-    .desarrollador-titulo, .desarrollando {
-        font-size: 26px;
-    }
-    
-    .card {
-        font-size: 18px;
-        text-align: center;
-        width: 700px;
-    }
-    
-    .desarrollador span {
-        font-size: 18px;
-    }
-    
-    .desarrollador .fecha {
-        font-size: 20px;
-    }
-    
-    .fecha .fecha-titulo, .fecha .proyectos-contador {
-        font-size: 16px;
-    }
-    
-    .fecha #años,
-    .fecha #meses,
-    .fecha #dias,
-    .fecha #proyectos-contador {
-        height: 80px;
-        width: 90px;
-    }
-
-    /* MIS PROYECTOS */
-    #proyectos {
-        margin: 50px 50px 0 50px;
-    }
-
-    .proyectos-contenedor {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .titulo-proyectos {
-        font-size: 26px;
-        margin: 0 0 30px 0;
-    }
-
-    .card-proyecto {
-        height: 350px;
-        margin-top: 30px;
-        width: 650px;
-    }
-
-    .proyecto-contenido h3 {
-        font-size: 1.3em;
-    }
-
-    .proyecto-contenido p {
-        font-size: 1.2em;
-    }
-
-    .hover-efecto h3 {
-        font-size: 1.3em;
-    }
-
-    .lenguaje-item {
-        height: 38px;
-        width: 38px;
-    }
-
-    .lenguajes-utilizados img {
-        height: 20px;
-        width: 20px;
-    }
-
-    .icono-proyecto {
-        height: 40px;
-        width: 40px;
-    }
-
-    /* CARRUSEL */
-    .carousel img {
-        height: 300px;
-        width: 540px;
-    }
-
-    .anterior, .siguiente {
-        font-size: 24px;
-    }
-
-    /* CONTACTO */
-    .contenedor-formulario-contacto {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .formulario-contacto {
-        width: 100%;
-    }
-
-    .formulario-contacto h3 {
-        font-size: 26px;
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .control {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    }
-
-    .control input {
-        font-size: 15px;
-        height: 32px;
-        width: 285px;
-    }
-
-    .control textarea {
-        font-size: 15px;
-        width: 285px;
-    }
-
-    .labin button {
-        font-size: 16px;
-        height: 36px;
-        margin-top: 30px;
-        position: relative;
-        width: 297px;
-    }
-
-    /* MAS INFORMACION (UBICADO) */
-
-    .mas-informacion {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 30px 0;
-        width: 100%;
-    }
-
-    .mas-informacion h3 {
-        font-size: 26px;
-        text-align: center;
-    }
-
-    .mas-informacion iframe {
-        height: 260px;
-        width: 600px;
-    }
-}
-
-@media screen and (max-width: 724px) {
-    /* ACERCA DE MI */
-    .contenido {
-        width: 600px;
-    }
-    
-    .card {
-        width: 600px;
-    }
-
-    /* LENGUAJES APRENDIDOS */
-    .habilidad:hover::after {
-        font-size: 0.8em;
-    }
-    
-    .icono {
-        height: 75px;
-        width: 75px;
-    }
-    
-    .icono .img-icono {
-        height: 40px;
-        width: 40px;
-    }
-    
-    .habilidad span {
-        font-size: 0.7em;
-    }
-
-    /* MIS PROYECTOS */
-    #proyectos {
-        margin: 50px 40px 0 40px;
-    }
-
-    .titulo-proyectos {
-        font-size: 28px;
-        margin: 0 0 25px 0;
-    }
-
-    .card-proyecto {
-        height: 300px;
-        width: 550px;
-    }
-
-    .proyecto-contenido h3 {
-        font-size: 1.2em;
-    }
-
-    .proyecto-contenido p {
-        font-size: 1.1em;
-    }
-
-    .hover-efecto h3 {
-        font-size: 1.2em;
-    }
-
-    .lenguaje-item {
-        height: 36px;
-        width: 36px;
-    }
-
-    .lenguajes-utilizados img {
-        height: 18px;
-        width: 18px;
-    }
-
-    .icono-proyecto {
-        height: 38px;
-        width: 38px;
-    }
-
-    /* CARRUSEL */
-    .carousel img {
-        height: 280px;
-        width: 440px;
-    }
-
-    .anterior, .siguiente {
-        font-size: 22px;
-    }
-
-    /* CONTACTO */
-    .formulario-contacto h3 {
-        font-size: 28px;
-    }
-
-    .control input {
-        height: 32px;
-        width: 265px;
-    }
-
-    .control textarea {
-        width: 265px;
-    }
-
-    .labin button {
-        height: 36px;
-        width: 287px;
-    }
-
-    /* MAS INFORMACION (UBICADO) */
-    .mas-informacion {
-        margin: 30px 0;
-    }
-
-    .mas-informacion h3 {
-        font-size: 26px;
-    }
-
-    .mas-informacion iframe {
-        height: 260px;
-        width: 580px;
-    }
-}
-
-@media screen and (max-width: 624px) {
-    /* HEADER */
-    .img-logo {
-        height: 40px;
-        width: 40px;
-    }
-
-    .nombre {
-        font-size: 17px;
-    }
-
-    li {
-        height: 12px;
-        margin: 0 10px;
-        padding: 8px;
-        width: 12px;
-    }
-
-    li .titulo-red {
-        font-size: 9px;
-    }
-
-    /* ACERCA DE MI */
-    .contenido {
-        width: 500px;
-    }
-    
-    .desarrollador-titulo, .desarrollando {
-        font-size: 24px;
-    }
-    
-    .card {
-        font-size: 15px;
-        width: 450px;
-    }
-    
-    .desarrollador span {
-        font-size: 15px;
-    }
-    
-    .desarrollador .fecha {
-        font-size: 16px;
-    }
-    
-    .fecha .fecha-titulo, .fecha .proyectos-contador {
-        font-size: 13px;
-    }
-    
-    .fecha #años,
-    .fecha #meses,
-    .fecha #dias,
-    .fecha #proyectos-contador {
-        height: 65px;
-        width: 75px;
-    }
-
-    /* MIS PROYECTOS */
-    #proyectos {
-        margin: 50px 30px 0 30px;
-    }
-
-    .titulo-proyectos {
-        font-size: 24px;
-        margin: 0 0 20px 0;
-    }
-
-    .card-proyecto {
-        height: 250px;
-        width: 450px;
-    }
-
-    .proyecto-contenido p {
-        font-size: 1em;
-    }
-
-    .hover-efecto h3 {
-        font-size: 1.1em;
-    }
-
-    .lenguaje-item {
-        height: 35px;
-        width: 35px;
-    }
-
-    .lenguajes-utilizados img {
-        height: 17px;
-        width: 17px;
-    }
-
-    .icono-proyecto {
-        height: 36px;
-        width: 36px;
-    }
-
-    /* CARRUSEL */
-    .carousel img {
-        height: 260px;
-        width: 380px;
-    }
-
-    .anterior, .siguiente {
-        font-size: 20px;
-    }
-
-    .anterior {
-        left: 5px;
-    }
-
-    .siguiente {
-        right: 5px;
-    }
-
-    /* CONTACTO */
-    .formulario-contacto h3 {
-        font-size: 24px;
-    }
-
-    .control input {
-        height: 32px;
-        width: 200px;
-    }
-
-    .control textarea {
-        width: 200px;
-    }
-
-    .labin button {
-        height: 36px;
-        width: 210px;
-    }
-
-    /* MAS INFORMACION (UBICADO) */
-    .mas-informacion h3 {
-        font-size: 24px;
-    }
-
-    .mas-informacion iframe {
-        height: 250px;
-        width: 430px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    /* HEADER */
-    .logo {
-        margin: 0;
-    }
-    
-    .img-logo, .nombre {
-        margin-right: 5px;   
-    }
-
-    .img-logo {
-        height: 32px;
-        width: 32px;
-    }
-
-    .nombre {
-        font-size: 14px;
-    }
-
-    li {
-        height: 10px;
-        margin: 0 12px;
-        padding: 8px;
-        width: 10px;
-    }
-
-    li a i {
-        font-size: 14px;
-    }
-
-    li .titulo-red {
-        font-size: 9px;
-    }
-
-    /* ACERCA DE MI */
-    .contenido {
-        width: 450px;
-    }
-    
-    .desarrollador-titulo, .desarrollando {
-        font-size: 20px;
-    }
-    
-    .card {
-        font-size: 14px;
-        width: 350px;
-    }
-    
-    .desarrollador span {
-        font-size: 14px;
-    }
-    
-    .desarrollador .fecha {
-        font-size: 15px;
-    }
-    
-    .fecha .fecha-titulo, .fecha .proyectos-contador {
-        font-size: 12px;
-    }
-    
-    .fecha #años,
-    .fecha #meses,
-    .fecha #dias,
-    .fecha #proyectos-contador {
-        height: 60px;
-        width: 70px;
-    }
-
-    /* LENGUAJES APRENDIDOS */
-    #habilidades {
-        padding: 30px;
-    }
-    
-    .contenedor-habilidades {
-        gap: 20px;
-    }
-
-    /* MIS PROYECTOS */
-    .titulo-proyectos {
-        font-size: 20px;
-    } 
-
-    .card-proyecto {
-        height: 300px;
-        width: 350px;
-    }
-    
-    /* CARRUSEL */
-    .carousel img {
-        height: 260px;
-        width: 320px;
-    }
-
-    .anterior {
-        left: 2px;
-    }
-
-    .siguiente {
-        right: 2px;
-    }
-
-    /* CONTACTO */
-    .formulario-contacto h3 {
-        font-size: 20px;
-    }
-
-    .control {
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-    .control input {
-        margin-top: 20px;
-        width: 320px;
-    }
-
-    .control textarea {
-        width: 320px;
-    }
-
-    .control textarea::placeholder {
-        top: 50%;
-        transform: translateY(-10%);
-    }
-
-    .labin button {
-        color: #fff;
-        width: 320px;
-    }
-
-    /* MAS INFORMACION (UBICADO) */
-    .mas-informacion h3 {
-        font-size: 20px;
-    }
-
-    .mas-informacion iframe {
-        width: 320px;
-    }
+.contenedor_principal_contacto {
+    position: relative;
 }
